@@ -1,3 +1,18 @@
+/* Tab */
+
+#tabzilla {
+    float: right;
+    display: block;
+    background: url(/tabzilla/media/img/tab.png);
+    height: 45px;
+    width: 150px;
+    position: relative;
+    text-indent: -200px;
+    overflow: hidden;
+}
+
+/* Tab panel */
+
 #tabzilla-panel {
     display: none;
     background: #fff;
@@ -87,12 +102,6 @@
     color: #484848;
     display: block;
     padding: 0.4em 20px;
-}
-
-#header a.mozilla {
-    background-image: url(/img/tabzilla/tab.png);
-    height: 45px;
-    width: 150px;
 }
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search {
