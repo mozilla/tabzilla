@@ -1,0 +1,130 @@
+#moztab-panel {
+    display: none;
+    background: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+#moztab-contents {
+    width: 992px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+* html #moztab-contents             { zoom: 1; } /* IE6 */
+*:first-child+html #moztab-contents { zoom: 1; } /* IE7 */
+
+#moztab-contents:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+#moztab-promo {
+    float: left;
+    width: 300px;
+    height: 210px;
+    margin-right: 5px;
+    background: #fafafa;
+    position: relative;
+}
+
+#moztab-promo .snippet img {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+
+#moztab-promo .snippet {
+    padding: 40px 20px 40px 70px;
+}
+
+#moztab-panel #moztab-nav,
+#moztab-panel #moztab-nav h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#moztab-panel #moztab-nav h2 {
+    font-weight: 600;
+    font-size: 13px;
+    margin: 0 20px 0.4em 20px;
+    white-space: nowrap;
+}
+
+#moztab-panel #moztab-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#moztab-panel #moztab-nav ul li {
+    float: left;
+    list-style-type: none;
+    margin: 40px 0 0 0;
+    padding: 0;
+    width: 135px;
+    height: 95px;
+    border-right: 1px dotted #d6d6d6;
+}
+
+#moztab-panel #moztab-nav ul li ul li {
+    float: none;
+    font-size: 11px;
+    margin: 0;
+    border-right: 0;
+    height: auto;
+}
+
+#moztab-panel #moztab-nav a {
+    color: #484848;
+    display: block;
+    padding: 0.4em 20px;
+}
+
+#header a.mozilla {
+    background-image: url(/img/moztab/tab.png);
+    height: 45px;
+    width: 150px;
+}
+
+#moztab-panel #moztab-nav ul li#moztab-search {
+    border-right: 0;
+}
+
+#moztab-panel #moztab-nav ul li#moztab-search a {
+    padding-top: 0;
+}
+
+#moztab-panel #moztab-nav ul li#moztab-search form  {
+    margin: 0.4em 20px
+}
+
+#moztab-panel #moztab-nav ul li#moztab-search input {
+    width: 100px;
+    background: #fafafa;
+    text-transform: uppercase;
+    color: #484848;
+    border: 1px solid #efefef;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -moz-box-shadow: 0 0 0 3px rgba(0,0,0,0.01) inset;
+    -webkit-box-shadow: 0 0 0 3px rgba(0,0,0,0.01) inset;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.01) inset;
+    padding: 4px;
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+#moztab-panel #moztab-nav ul li#moztab-search input:hover {
+    border-color: #ddd;
+}
