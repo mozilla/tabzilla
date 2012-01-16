@@ -11,7 +11,6 @@
  * @author    Steven Garrity <steven@silverorange.com>
  */
 
-
 function Tabzilla()
 {
     Tabzilla.init();
@@ -28,8 +27,11 @@ Tabzilla.init = function()
 
     // set up event listeners for link
     Tabzilla.addEventListener(Tabzilla.link, 'click', function(e) {
+        Tabzilla.preventDefault(e);
         Tabzilla.toggle();
     });
+
+    Tabzilla.opened = false;
 };
 
 Tabzilla.buildPanel = function()
@@ -43,14 +45,98 @@ Tabzilla.buildPanel = function()
 Tabzilla.addEventListener = function(el, ev, handler)
 {
     if (el.attachEvent) {
-        el.attachEvent(ev, handler);
+        el.attachEvent('on' + ev, handler);
     } else {
-        el.addEventListener('on' + ev, handler, false);
+        el.addEventListener(ev, handler, false);
     }
 };
 
-Tabzilla.toggle = function(e)
+Tabzilla.toggle = function()
 {
+    if (Tabzilla.opened) {
+        Tabzilla.close();
+    } else {
+        Tabzilla.open();
+    }
+};
+
+Tabzilla.open = function()
+{
+    if (Tabzilla.opened) {
+        return;
+    }
+
+    console.log('open');
+
+    Tabzilla.opened = true;
+};
+
+Tabzilla.close = function()
+{
+    if (!Tabzilla.opened) {
+        return;
+    }
+
+    console.log('close');
+
+    Tabzilla.opened = false;
+};
+
+Tabzilla.preventDefault = function(ev)
+{
+    if (ev.preventDefault) {
+        ev.preventDefault();
+    } else {
+        ev.returnValue = false;
+    }
+};
+
+Tabzilla.addClass = function(el, className)
+{
+    if (!Tabzilla.hasClass(el, className)) {
+        el.className += ' ' + className;
+    }
+
+};
+
+Tabzilla.removeClass = function(el, className)
+{
+    var exp = new RegExp(
+        '('
+        + '^'   + className + '$|'
+        + '^'   + className + '\s+|'
+        + '\s+' + className + '\s+|'
+        + '\s+' + className + '$'
+        + ')'
+    );
+
+    el.className.replaceAll(exp, '');
+};
+
+Tabzilla.hasClass = function(el, className)
+{
+    var start = className + ' ';
+    var end   = ' ' + className;
+    var mid   = ' ' + className + ' ';
+    var all   = className;
+
+    if (el.className == all) {
+        return true;
+    }
+
+    if (el.className.indexOf(start) == 0) {
+        return true;
+    }
+
+    if (el.className.indexOf(mid) != -1) {
+        return true;
+    }
+
+    if (el.className.indexOf(end) == el.className.length - end.length) {
+        return true;
+    }
+
+    return false;
 };
 
 Tabzilla.content =
