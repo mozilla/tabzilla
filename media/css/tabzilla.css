@@ -1,4 +1,4 @@
-#moztab-panel {
+#tabzilla-panel {
     display: none;
     background: #fff;
     font-family: 'Open Sans', sans-serif;
@@ -6,16 +6,16 @@
     font-weight: normal;
 }
 
-#moztab-contents {
+#tabzilla-contents {
     width: 992px;
     margin: 0 auto;
     text-align: left;
 }
 
-* html #moztab-contents             { zoom: 1; } /* IE6 */
-*:first-child+html #moztab-contents { zoom: 1; } /* IE7 */
+* html #tabzilla-contents             { zoom: 1; } /* IE6 */
+*:first-child+html #tabzilla-contents { zoom: 1; } /* IE7 */
 
-#moztab-contents:after {
+#tabzilla-contents:after {
     visibility: hidden;
     display: block;
     font-size: 0;
@@ -24,7 +24,7 @@
     height: 0;
 }
 
-#moztab-promo {
+#tabzilla-promo {
     float: left;
     width: 300px;
     height: 210px;
@@ -33,18 +33,18 @@
     position: relative;
 }
 
-#moztab-promo .snippet img {
+#tabzilla-promo .snippet img {
     position: absolute;
     top: 40px;
     left: 20px;
 }
 
-#moztab-promo .snippet {
+#tabzilla-promo .snippet {
     padding: 40px 20px 40px 70px;
 }
 
-#moztab-panel #moztab-nav,
-#moztab-panel #moztab-nav h2 {
+#tabzilla-panel #tabzilla-nav,
+#tabzilla-panel #tabzilla-nav h2 {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
@@ -53,19 +53,19 @@
     text-transform: uppercase;
 }
 
-#moztab-panel #moztab-nav h2 {
+#tabzilla-panel #tabzilla-nav h2 {
     font-weight: 600;
     font-size: 13px;
     margin: 0 20px 0.4em 20px;
     white-space: nowrap;
 }
 
-#moztab-panel #moztab-nav ul {
+#tabzilla-panel #tabzilla-nav ul {
     margin: 0;
     padding: 0;
 }
 
-#moztab-panel #moztab-nav ul li {
+#tabzilla-panel #tabzilla-nav ul li {
     float: left;
     list-style-type: none;
     margin: 40px 0 0 0;
@@ -75,7 +75,7 @@
     border-right: 1px dotted #d6d6d6;
 }
 
-#moztab-panel #moztab-nav ul li ul li {
+#tabzilla-panel #tabzilla-nav ul li ul li {
     float: none;
     font-size: 11px;
     margin: 0;
@@ -83,31 +83,31 @@
     height: auto;
 }
 
-#moztab-panel #moztab-nav a {
+#tabzilla-panel #tabzilla-nav a {
     color: #484848;
     display: block;
     padding: 0.4em 20px;
 }
 
 #header a.mozilla {
-    background-image: url(/img/moztab/tab.png);
+    background-image: url(/img/tabzilla/tab.png);
     height: 45px;
     width: 150px;
 }
 
-#moztab-panel #moztab-nav ul li#moztab-search {
+#tabzilla-panel #tabzilla-nav ul li#tabzilla-search {
     border-right: 0;
 }
 
-#moztab-panel #moztab-nav ul li#moztab-search a {
+#tabzilla-panel #tabzilla-nav ul li#tabzilla-search a {
     padding-top: 0;
 }
 
-#moztab-panel #moztab-nav ul li#moztab-search form  {
+#tabzilla-panel #tabzilla-nav ul li#tabzilla-search form  {
     margin: 0.4em 20px
 }
 
-#moztab-panel #moztab-nav ul li#moztab-search input {
+#tabzilla-panel #tabzilla-nav ul li#tabzilla-search input {
     width: 100px;
     background: #fafafa;
     text-transform: uppercase;
@@ -125,6 +125,6 @@
     transition: all .2s linear;
 }
 
-#moztab-panel #moztab-nav ul li#moztab-search input:hover {
+#tabzilla-panel #tabzilla-nav ul li#tabzilla-search input:hover {
     border-color: #ddd;
 }
