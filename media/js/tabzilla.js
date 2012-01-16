@@ -32,6 +32,8 @@ Tabzilla.init = function()
     });
 
     Tabzilla.opened = false;
+    Tabzilla.addClass(Tabzilla.panel, 'tabzilla-closed');
+    Tabzilla.removeClass(Tabzilla.panel, 'tabzilla-opened');
 };
 
 Tabzilla.buildPanel = function()
@@ -66,7 +68,8 @@ Tabzilla.open = function()
         return;
     }
 
-    console.log('open');
+    Tabzilla.addClass(Tabzilla.panel, 'tabzilla-opened');
+    Tabzilla.removeClass(Tabzilla.panel, 'tabzilla-closed');
 
     Tabzilla.opened = true;
 };
@@ -77,7 +80,8 @@ Tabzilla.close = function()
         return;
     }
 
-    console.log('close');
+    Tabzilla.removeClass(Tabzilla.panel, 'tabzilla-opened');
+    Tabzilla.addClass(Tabzilla.panel, 'tabzilla-closed');
 
     Tabzilla.opened = false;
 };
@@ -95,8 +99,8 @@ Tabzilla.addClass = function(el, className)
 {
     if (!Tabzilla.hasClass(el, className)) {
         el.className += ' ' + className;
+        el.className = el.className.replace(/^\s+/, '').replace(/\s+$/, '');
     }
-
 };
 
 Tabzilla.removeClass = function(el, className)
@@ -104,13 +108,14 @@ Tabzilla.removeClass = function(el, className)
     var exp = new RegExp(
         '('
         + '^'   + className + '$|'
-        + '^'   + className + '\s+|'
-        + '\s+' + className + '\s+|'
-        + '\s+' + className + '$'
-        + ')'
+        + '^'   + className + '\\s+|'
+        + '\\s+' + className + '\\s+|'
+        + '\\s+' + className + '$'
+        + ')',
+        'g'
     );
 
-    el.className.replaceAll(exp, '');
+    el.className = el.className.replace(exp, '');
 };
 
 Tabzilla.hasClass = function(el, className)
@@ -132,7 +137,9 @@ Tabzilla.hasClass = function(el, className)
         return true;
     }
 
-    if (el.className.indexOf(end) == el.className.length - end.length) {
+    if (   el.className.length >= end.length
+        && el.className.indexOf(end) == el.className.length - end.length
+    ) {
         return true;
     }
 
