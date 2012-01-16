@@ -14,7 +14,44 @@
 
 function Tabzilla()
 {
+    Tabzilla.init();
 }
+
+Tabzilla.init = function()
+{
+    Tabzilla.link  = document.getElementById('tabzilla');
+    Tabzilla.panel = Tabzilla.buildPanel();
+
+    // add panel as first element of body element
+    var body = document.getElementsByTagName('body')[0];
+    body.insertBefore(Tabzilla.panel, body.firstChild);
+
+    // set up event listeners for link
+    Tabzilla.addEventListener(Tabzilla.link, 'click', function(e) {
+        Tabzilla.toggle();
+    });
+};
+
+Tabzilla.buildPanel = function()
+{
+    var panel = document.createElement('div');
+    panel.id = 'tabzilla-panel';
+    panel.innerHMTL = Tabzilla.content;
+    return panel;
+};
+
+Tabzilla.addEventListener = function(el, ev, handler)
+{
+    if (el.attachEvent) {
+        el.attachEvent(ev, handler);
+    } else {
+        el.addEventListener('on' + ev, handler, false);
+    }
+};
+
+Tabzilla.toggle = function(e)
+{
+};
 
 Tabzilla.content =
     '<div id="moztab-panel">
