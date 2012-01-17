@@ -5,16 +5,10 @@ tabzilla
 
 Adding the universal tab requires to a site requires:
 
-1. Add the static tab link (example below) and associated tabzilla.css CSS to the top of your template
-2. Included the tabzilla.js file in your template (preferably in the footer)
-
-Static Link
------------
-
-The following static link must be included in your template, positioned at the top right of your the content area on your site.
-
-    <a href="http://mozilla.org/tab" id="tabzilla">mozilla</a>
-
+1. Add the static tab link (example below) and associated tabzilla.css CSS to the top of your template  
+    ```<a href="http://mozilla.org/tab" id="tabzilla">mozilla</a>```
+2. Include the tabzilla.js file in your template (preferably in the footer)  
+    ```<script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>```
 
 Requirements
 ------------
