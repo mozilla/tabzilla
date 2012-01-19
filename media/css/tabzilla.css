@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('/img/fonts/OpenSans-Regular-webfont.eot');
-    src: url('/img/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/img/fonts/OpenSans-Regular-webfont.woff') format('woff'),
-         url('/img/fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
-         url('/img/fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+    src: url('//www.mozilla.org/img/fonts/OpenSans-Regular-webfont.eot');
+    src: url('//www.mozilla.org/img/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('//www.mozilla.org/img/fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('//www.mozilla.org/img/fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('//www.mozilla.org/img/fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
     font-weight: 400;
     font-style: normal;
 
@@ -14,11 +14,11 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('/img/fonts/OpenSans-Semibold-webfont.eot');
-    src: url('/img/fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/img/fonts/OpenSans-Semibold-webfont.woff') format('woff'),
-         url('/img/fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
-         url('/img/fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+    src: url('//www.mozilla.org/img/fonts/OpenSans-Semibold-webfont.eot');
+    src: url('//www.mozilla.org/img/fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('//www.mozilla.org/img/fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('//www.mozilla.org/img/fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('//www.mozilla.org/img/fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
     font-weight: 600;
     font-style: normal;
 
@@ -36,6 +36,7 @@
     position: relative;
     text-indent: -200px;
     overflow: hidden;
+    z-index: 999;
 }
 
 /* Tab panel */
@@ -65,6 +66,9 @@
     text-align: left;
     position: absolute;
     bottom: 0;
+    left: 50%;
+    margin-left: -486px;
+    right: 0;
 }
 
 * html #tabzilla-contents             { zoom: 1; } /* IE6 */
