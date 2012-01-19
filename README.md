@@ -31,3 +31,4 @@ Note the following limitations of the bookmarklet:
 
 * The tab is aligned to the top right of the viewport, not the top-right of your layout, as it should be.
 * The tab has a float:left; which may interfere with other content on your page, or slip behind other elements and be invisible.
+
