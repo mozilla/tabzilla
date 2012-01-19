@@ -191,7 +191,7 @@ Tabzilla.content =
     + '        <form title="Search Mozilla sites" action="http://www.google.com/cse">'
     + '          <input type="hidden" value="002443141534113389537:ysdmevkkknw" name="cx">'
     + '          <input type="hidden" value="FORID:0" name="cof">'
-    + '          <input type="search" placeholder="Search" id="q" name="q">'
+    + '          <input type="search" placeholder="SEARCH" id="q" name="q">'
     + '        </form>'
     + '      </li>'
     + '    </ul>'
