@@ -28,7 +28,7 @@
 #tabzilla {
     float: right;
     display: block;
-    background: url(/tabzilla/media/img/tab.png);
+    background: url(//www.mozilla.org/tabzilla/media/img/tab.png);
     height: 45px;
     width: 150px;
     position: relative;
@@ -168,7 +168,6 @@
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input {
     width: 100px;
     background: #fafafa;
-    text-transform: uppercase;
     color: #484848;
     border: 1px solid #ddd;
     -moz-border-radius: 6px;
