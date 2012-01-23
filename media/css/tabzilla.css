@@ -32,7 +32,7 @@
     height: 45px;
     width: 150px;
     position: relative;
-    text-indent: -200px;
+    text-indent: -2000px;
     overflow: hidden;
     z-index: 999;
 }
