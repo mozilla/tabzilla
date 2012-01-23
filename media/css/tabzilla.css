@@ -38,7 +38,7 @@
 }
 
 .darkbg #tabzilla {
-    background: url(//www.mozilla.org/tabzilla/media/img/tab-darkbg.png);
+    background-image: url(//www.mozilla.org/tabzilla/media/img/tab-darkbg.png);
 }
 
 /* Tab panel */
