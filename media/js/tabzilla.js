@@ -104,7 +104,7 @@ Tabzilla.run = function()
     // The document's readyState in Safari currently will
     // change to loaded/complete before images are loaded.
     } else if (webkit && webkit < 525) {
-        var Tabzilla.readyInterval = setInterval(function() {
+        Tabzilla.readyInterval = setInterval(function() {
             var rs = document.readyState;
             if ('loaded' == rs || 'complete' == rs) {
                 clearInterval(Tabzilla.readyInterval);
