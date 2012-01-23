@@ -35,6 +35,37 @@
  *   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  *   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
+ * Portions adapted from the jQuery Easing plugin written by Robert Penner and
+ * used under the following license:
+ *
+ *   Copyright 2001 Robert Penner
+ *   All rights reserved.
+ *
+ *   Redistribution and use in source and binary forms, with or without
+ *   modification, are permitted provided that the following conditions are
+ *   met:
+ *
+ *   - Redistributions of source code must retain the above copyright notice,
+ *     this list of conditions and the following disclaimer.
+ *   - Redistributions in binary form must reproduce the above copyright
+ *     notice, this list of conditions and the following disclaimer in the
+ *     documentation and/or other materials provided with the distribution.
+ *   - Neither the name of the author nor the names of contributors may be
+ *     used to endorse or promote products derived from this software without
+ *    specific prior written permission.
+ *
+ *   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ *   "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+ *   TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ *   PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+ *   CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ *   EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ *   PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ *   PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ *   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ *   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ *   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
  *
  * @copyright 2012 silverorange Inc.
  * @license   http://www.mozilla.org/MPL/MPL-1.1.html Mozilla Public License 1.1
@@ -44,11 +75,40 @@
 
 function Tabzilla()
 {
-    Tabzilla.run();
+    if (typeof jQuery != 'undefined' && jQuery) {
+        jQuery(document).ready(Tabzilla.init);
+    } else {
+        Tabzilla.run();
+    }
 }
 
 Tabzilla.READY_POLL_INTERVAL = 40;
 Tabzilla.readyInterval = null;
+Tabzilla.jQueryCDNSrc =
+    '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
+
+Tabzilla.hasCSSTransitions = (function() {
+    var div = document.createElement('div');
+    div.innerHTML = '<div style="'
+        + '-webkit-transition: color 1s linear;'
+        + '-moz-transition: color 1s linear;'
+        + '-ms-transition: color 1s linear;'
+        + '-o-transition: color 1s linear;'
+        + '"></div>';
+
+    var hasTransitions = (
+           (div.firstChild.style.webkitTransition !== undefined)
+        || (div.firstChild.style.MozTransition !== undefined)
+        || (div.firstChild.style.msTransition !== undefined)
+        || (div.firstChild.style.OTransition !== undefined)
+    );
+
+    delete div;
+
+    return false;
+
+    return hasTransitions;
+})();
 
 /**
  * Sets up the DOMReady event for Tabzilla
@@ -124,6 +184,15 @@ Tabzilla.ready = function()
 {
     if (!Tabzilla.DOMReady) {
         Tabzilla.DOMReady = true;
+
+        // if we don't have CSS3 transitions, dynamically load jQuery from CDN
+        if (!Tabzilla.hasCSSTransitions && typeof jQuery == 'undefined') {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = Tabzilla.jQueryCDNSrc;
+            document.getElementsByTagName('body')[0].appendChild(script);
+        }
+
         Tabzilla.init();
         Tabzilla.removeEventListener(
             document,
@@ -135,6 +204,18 @@ Tabzilla.ready = function()
 
 Tabzilla.init = function()
 {
+    if (!Tabzilla.hasCSSTransitions) {
+        // add easing functions
+        jQuery.extend(jQuery.easing, {
+            'easeInOut':  function (x, t, b, c, d) {
+                if (( t /= d / 2) < 1) {
+                    return c / 2 * t * t + b;
+                }
+                return -c / 2 * ((--t) * (t - 2) - 1) + b;
+            }
+        });
+    }
+
     Tabzilla.link  = document.getElementById('tabzilla');
     Tabzilla.panel = Tabzilla.buildPanel();
 
@@ -194,8 +275,13 @@ Tabzilla.open = function()
         return;
     }
 
-    Tabzilla.addClass(Tabzilla.panel, 'tabzilla-opened');
-    Tabzilla.removeClass(Tabzilla.panel, 'tabzilla-closed');
+    if (Tabzilla.hasCSSTransitions) {
+        Tabzilla.addClass(Tabzilla.panel, 'tabzilla-opened');
+        Tabzilla.removeClass(Tabzilla.panel, 'tabzilla-closed');
+    } else {
+        // jQuery animation fallback
+        jQuery(Tabzilla.panel).animate({ height: 200 }, 200, 'easeInOut');
+    }
 
     Tabzilla.opened = true;
 };
@@ -206,8 +292,13 @@ Tabzilla.close = function()
         return;
     }
 
-    Tabzilla.removeClass(Tabzilla.panel, 'tabzilla-opened');
-    Tabzilla.addClass(Tabzilla.panel, 'tabzilla-closed');
+    if (Tabzilla.hasCSSTransitions) {
+        Tabzilla.removeClass(Tabzilla.panel, 'tabzilla-opened');
+        Tabzilla.addClass(Tabzilla.panel, 'tabzilla-closed');
+    } else {
+        // jQuery animation fallback
+        jQuery(Tabzilla.panel).animate({ height: 0 }, 200, 'easeInOut');
+    }
 
     Tabzilla.opened = false;
 };
