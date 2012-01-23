@@ -5,6 +5,37 @@
  *
  * This code is licensed under the Mozilla Public License 1.1.
  *
+ * Event handling portions adapted from the YUI Event component used under
+ * the following license:
+ *
+ *   Copyright © 2012 Yahoo! Inc. All rights reserved.
+ *
+ *   Redistribution and use of this software in source and binary forms,
+ *   with or without modification, are permitted provided that the following conditions
+ *   are met:
+ *
+ *   - Redistributions of source code must retain the above copyright notice,
+ *     this list of conditions and the following disclaimer.
+ *   - Redistributions in binary form must reproduce the above copyright
+ *     notice, this list of conditions and the following disclaimer in the
+ *     documentation and/or other materials provided with the distribution.
+ *   - Neither the name of Yahoo! Inc. nor the names of YUI's contributors may
+ *     be used to endorse or promote products derived from this software
+ *     without specific prior written permission of Yahoo! Inc.
+ *
+ *   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ *   "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+ *   TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ *   PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+ *   CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ *   EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ *   PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ *   PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ *   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ *   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ *   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ *
  * @copyright 2012 silverorange Inc.
  * @license   http://www.mozilla.org/MPL/MPL-1.1.html Mozilla Public License 1.1
  * @author    Michael Gauthier <mike@silverorange.com>
@@ -13,8 +44,94 @@
 
 function Tabzilla()
 {
-    Tabzilla.init();
+    Tabzilla.run();
 }
+
+Tabzilla.READY_POLL_INTERVAL = 40;
+Tabzilla.readyInterval = null;
+
+/**
+ * Sets up the DOMReady event for Tabzilla
+ *
+ * Adapted from the YUI Event component. Defined in Tabzilla so we do not
+ * depend on YUI or jQuery. The YUI DOMReady implementation is based on work
+ * Dean Edwards, John Resig, Matthias Miller and Diego Perini.
+ */
+Tabzilla.run = function()
+{
+    var webkit = 0, isIE = false, ua = navigator.userAgent;
+    var m = ua.match(/AppleWebKit\/([^\s]*)/);
+
+    if (m && m[1]) {
+        webkit = parseInt(m[1], 10);
+    } else {
+        m = ua.match(/Opera[\s\/]([^\s]*)/);
+        if (!m || !m[1]) {
+            m = ua.match(/MSIE\s([^;]*)/);
+            if (m && m[1]) {
+                isIE = true;
+            }
+        }
+    }
+
+    // Internet Explorer: use the readyState of a defered script.
+    // This isolates what appears to be a safe moment to manipulate
+    // the DOM prior to when the document's readyState suggests
+    // it is safe to do so.
+    if (isIE) {
+        if (self !== self.top) {
+            document.onreadystatechange = function() {
+                if (document.readyState == 'complete') {
+                    document.onreadystatechange = null;
+                    Tabzilla.ready();
+                }
+            };
+        } else {
+            var n = document.createElement('p');
+            Tabzilla.readyInterval = setInterval(function() {
+                try {
+                    // throws an error if doc is not ready
+                    n.doScroll('left');
+                    clearInterval(Tabzilla.readyInterval);
+                    Tabzilla.readyInterval = null;
+                    Tabzilla.ready();
+                    n = null;
+                } catch (ex) {
+                }
+            }, Tabzilla.READY_POLL_INTERVAL);
+        }
+
+    // The document's readyState in Safari currently will
+    // change to loaded/complete before images are loaded.
+    } else if (webkit && webkit < 525) {
+        var Tabzilla.readyInterval = setInterval(function() {
+            var rs = document.readyState;
+            if ('loaded' == rs || 'complete' == rs) {
+                clearInterval(Tabzilla.readyInterval);
+                Tabzilla.readyInterval = null;
+                Tabzilla.ready();
+            }
+        }, Tabzilla.READY_POLL_INTERVAL);
+
+    // FireFox and Opera: These browsers provide a event for this
+    // moment.  The latest WebKit releases now support this event.
+    } else {
+        Tabzilla.addEventListener(document, 'DOMContentLoaded', Tabzilla.ready);
+    }
+};
+
+Tabzilla.ready = function()
+{
+    if (!Tabzilla.DOMReady) {
+        Tabzilla.DOMReady = true;
+        Tabzilla.init();
+        Tabzilla.removeEventListener(
+            document,
+            'DOMContentLoaded',
+            Tabzilla.ready
+        );
+    }
+};
 
 Tabzilla.init = function()
 {
@@ -46,10 +163,19 @@ Tabzilla.buildPanel = function()
 
 Tabzilla.addEventListener = function(el, ev, handler)
 {
-    if (el.attachEvent) {
+    if (typeof el.attachEvent != 'undefined') {
         el.attachEvent('on' + ev, handler);
     } else {
         el.addEventListener(ev, handler, false);
+    }
+};
+
+Tabzilla.removeEventListener = function(el, ev, handler)
+{
+    if (typeof el.detachEvent != 'undefined') {
+        el.detachEvent('on' + ev, handler);
+    } else {
+        el.removeEventListener(ev, handler, false);
     }
 };
 
