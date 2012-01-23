@@ -37,6 +37,10 @@
     z-index: 999;
 }
 
+.darkbg #tabzilla {
+    background: url(/tabzilla/media/img/tab-darkbg.png);
+}
+
 /* Tab panel */
 
 #tabzilla-panel {
