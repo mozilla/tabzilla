@@ -105,8 +105,6 @@ Tabzilla.hasCSSTransitions = (function() {
 
     delete div;
 
-    return false;
-
     return hasTransitions;
 })();
 
