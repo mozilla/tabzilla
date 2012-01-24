@@ -90,6 +90,7 @@
 
 #tabzilla-promo {
     float: left;
+    display: inline;
     width: 300px;
     height: 210px;
     margin-right: 5px;
@@ -134,6 +135,7 @@
 
 #tabzilla-panel #tabzilla-nav ul li {
     float: left;
+    display: inline;
     list-style-type: none;
     margin: 40px 0 0 0;
     padding: 0;
@@ -170,7 +172,7 @@
 }
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input {
-    width: 100px;
+    width: 90px;
     background: #fafafa;
     color: #484848;
     border: 1px solid #ddd;
