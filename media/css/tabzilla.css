@@ -41,6 +41,11 @@
     background-image: url(//www.mozilla.org/tabzilla/media/img/tab-darkbg.png);
 }
 
+#tabzilla.tabzilla-opened,
+.darkbg #tabzilla.tabzilla-opened {
+    background-position: 0 -45px;
+}
+
 /* Tab panel */
 
 #tabzilla-panel {
