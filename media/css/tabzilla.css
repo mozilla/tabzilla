@@ -182,6 +182,7 @@
     -moz-box-shadow: 0 0 0 3px rgba(0,0,0,0.02) inset;
     -webkit-box-shadow: 0 0 0 3px rgba(0,0,0,0.02) inset;
     box-shadow: 0 0 0 3px rgba(0,0,0,0.02) inset;
+    -webkit-appearance: none;
     padding: 4px;
     -moz-transition: all .2s linear;
     -webkit-transition: all .2s linear;
