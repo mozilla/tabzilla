@@ -192,5 +192,10 @@
     border-color: #ccc;
 }
 
+#tabzilla-panel #tabzilla-nav ul li#tabzilla-search input:focus {
+    outline: 0;
+    border-color: #999;
+}
+
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input::-webkit-input-placeholder { color: #ddd; }
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input:-moz-placeholder           { color: #ddd; }
