@@ -377,6 +377,7 @@ Tabzilla.content =
     + '          <li><a href="http://www.mozilla.org/about/mission.html">Mission</a></li>'
     + '          <li><a href="http://www.mozilla.org/about/">About</a></li>'
     + '          <li><a href="http://www.mozilla.org/products">Products</a></li>'
+    + '          <li><a href="http://support.mozilla.org/">Support</a></li>'
     + '          <li><a href="https://developer.mozilla.org">Developers Network</a></li>'
     + '        </ul>'
     + '      </li>'
