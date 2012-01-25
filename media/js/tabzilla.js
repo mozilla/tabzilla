@@ -227,9 +227,15 @@ Tabzilla.init = function()
         Tabzilla.toggle();
     });
 
+    Tabzilla.$panel = jQuery(Tabzilla.panel);
+    Tabzilla.$link  = jQuery(Tabzilla.link);
+
+    Tabzilla.$panel.addClass('tabzilla-closed');
+    Tabzilla.$link.addClass('tabzilla-closed');
+    Tabzilla.$panel.removeClass('tabzilla-opened');
+    Tabzilla.$link.removeClass('tabzilla-opened');
+
     Tabzilla.opened = false;
-    Tabzilla.addClass(Tabzilla.panel, 'tabzilla-closed');
-    Tabzilla.removeClass(Tabzilla.panel, 'tabzilla-opened');
 };
 
 Tabzilla.buildPanel = function()
@@ -274,8 +280,10 @@ Tabzilla.open = function()
     }
 
     if (Tabzilla.hasCSSTransitions) {
-        Tabzilla.addClass(Tabzilla.panel, 'tabzilla-opened');
-        Tabzilla.removeClass(Tabzilla.panel, 'tabzilla-closed');
+        Tabzilla.$panel.addClass('tabzilla-opened');
+        Tabzilla.$link.addClass('tabzilla-opened');
+        Tabzilla.$panel.removeClass('tabzilla-closed');
+        Tabzilla.$link.removeClass('tabzilla-closed');
     } else {
         // jQuery animation fallback
         jQuery(Tabzilla.panel).animate({ height: 200 }, 200, 'easeInOut');
@@ -291,8 +299,10 @@ Tabzilla.close = function()
     }
 
     if (Tabzilla.hasCSSTransitions) {
-        Tabzilla.removeClass(Tabzilla.panel, 'tabzilla-opened');
-        Tabzilla.addClass(Tabzilla.panel, 'tabzilla-closed');
+        Tabzilla.$panel.removeClass('tabzilla-opened');
+        Tabzilla.$link.removeClass('tabzilla-opened');
+        Tabzilla.$panel.addClass('tabzilla-closed');
+        Tabzilla.$link.addClass('tabzilla-closed');
     } else {
         // jQuery animation fallback
         jQuery(Tabzilla.panel).animate({ height: 0 }, 200, 'easeInOut');
@@ -308,57 +318,6 @@ Tabzilla.preventDefault = function(ev)
     } else {
         ev.returnValue = false;
     }
-};
-
-Tabzilla.addClass = function(el, className)
-{
-    if (!Tabzilla.hasClass(el, className)) {
-        el.className += ' ' + className;
-        el.className = el.className.replace(/^\s+/, '').replace(/\s+$/, '');
-    }
-};
-
-Tabzilla.removeClass = function(el, className)
-{
-    var exp = new RegExp(
-        '('
-        + '^'   + className + '$|'
-        + '^'   + className + '\\s+|'
-        + '\\s+' + className + '\\s+|'
-        + '\\s+' + className + '$'
-        + ')',
-        'g'
-    );
-
-    el.className = el.className.replace(exp, '');
-};
-
-Tabzilla.hasClass = function(el, className)
-{
-    var start = className + ' ';
-    var end   = ' ' + className;
-    var mid   = ' ' + className + ' ';
-    var all   = className;
-
-    if (el.className == all) {
-        return true;
-    }
-
-    if (el.className.indexOf(start) == 0) {
-        return true;
-    }
-
-    if (el.className.indexOf(mid) != -1) {
-        return true;
-    }
-
-    if (   el.className.length >= end.length
-        && el.className.indexOf(end) == el.className.length - end.length
-    ) {
-        return true;
-    }
-
-    return false;
 };
 
 Tabzilla.content =
