@@ -183,20 +183,38 @@ Tabzilla.ready = function()
     if (!Tabzilla.DOMReady) {
         Tabzilla.DOMReady = true;
 
-        // if we don't have CSS3 transitions, dynamically load jQuery from CDN
-        if (!Tabzilla.hasCSSTransitions && typeof jQuery == 'undefined') {
+        var onLoad = function() {
+            Tabzilla.init();
+            Tabzilla.removeEventListener(
+                document,
+                'DOMContentLoaded',
+                Tabzilla.ready
+            );
+        };
+
+        // if we don't have jQuery, dynamically load jQuery from CDN
+        if (typeof jQuery == 'undefined') {
             var script = document.createElement('script');
             script.type = 'text/javascript';
             script.src = Tabzilla.jQueryCDNSrc;
             document.getElementsByTagName('body')[0].appendChild(script);
-        }
 
-        Tabzilla.init();
-        Tabzilla.removeEventListener(
-            document,
-            'DOMContentLoaded',
-            Tabzilla.ready
-        );
+            if (script.readyState) {
+                // IE
+                script.onreadystatechange = function() {
+                    if (   script.readyState == 'loaded'
+                        || script.readyState == 'complete'
+                    ) {
+                        onLoad();
+                    }
+                };
+            } else {
+                // Others
+                script.onload = onLoad;
+            }
+        } else {
+            onLoad();
+        }
     }
 };
 
