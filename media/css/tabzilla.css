@@ -195,6 +195,13 @@
     color: #484848;
     display: block;
     padding: 0.4em 20px;
+    outline: 0;
+}
+
+#tabzilla-panel #tabzilla-nav a:hover,
+#tabzilla-panel #tabzilla-nav a:active,
+#tabzilla-panel #tabzilla-nav a:focus {
+    text-decoration: underline;
 }
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search {
