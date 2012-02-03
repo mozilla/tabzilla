@@ -137,9 +137,10 @@
 }
 
 #tabzilla-promo .snippet {
-    padding: 40px 20px 40px 70px;
+    padding: 40px;
 }
 
+#tabzilla-promo .snippet h4,
 #tabzilla-panel #tabzilla-nav,
 #tabzilla-panel #tabzilla-nav h2 {
     margin: 0;
@@ -149,6 +150,13 @@
     font-style: normal;
     font-weight: normal;
     text-transform: uppercase;
+}
+
+#tabzilla-promo .snippet h4 {
+    line-height: 1.1;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 0.4em;
 }
 
 #tabzilla-panel #tabzilla-nav h2 {
