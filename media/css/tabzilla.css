@@ -198,6 +198,12 @@
     outline: 0;
 }
 
+#tabzilla-panel #tabzilla-nav a,
+#tabzilla-panel #tabzilla-nav a:link,
+#tabzilla-panel #tabzilla-nav a:visited {
+    text-decoration: none;
+}
+
 #tabzilla-panel #tabzilla-nav a:hover,
 #tabzilla-panel #tabzilla-nav a:active,
 #tabzilla-panel #tabzilla-nav a:focus {
