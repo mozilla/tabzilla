@@ -89,6 +89,7 @@
     -ms-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     overflow: hidden;
+    direction: ltr;
 }
 
 #tabzilla-panel.tabzilla-opened {
