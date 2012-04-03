@@ -343,7 +343,7 @@ Tabzilla.content =
     + '  <div id="tabzilla-promo">'
     + '    <div class="snippet">'
     + '      <h4>Welcome!</h4>'
-    + '      <p>Wherever you’re going in the Mozilla Web universe, this is your starting place. Happy exploring!</p>'
+    + '      <p>Wherever you&rsquo;re going in the Mozilla Web universe, this is your starting place. Happy exploring!</p>'
     + '    </div>'
     + '  </div>'
     + '  <div id="tabzilla-nav">'
