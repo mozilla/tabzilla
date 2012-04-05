@@ -97,13 +97,9 @@
 }
 
 #tabzilla-contents {
-    width: 992px;
     margin: 0 auto;
     text-align: left;
-    position: absolute;
     bottom: 0;
-    left: 50%;
-    margin-left: -486px;
     right: 0;
 }
 
@@ -122,7 +118,7 @@
 #tabzilla-promo {
     float: left;
     display: inline;
-    width: 300px;
+    width: 30.25%; /* 300/992 * 100 = 30.25% */
     height: 210px;
     margin-right: 5px;
     background: #f8f8f8;
@@ -178,7 +174,7 @@
     list-style-type: none;
     margin: 40px 0 0 0;
     padding: 0;
-    width: 135px;
+    width: 13.60%; /* 135/992 * 100 = 13.60% */
     height: 95px;
     border-right: 1px dotted #d6d6d6;
     background: none;
@@ -252,3 +248,71 @@
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input::-webkit-input-placeholder { color: #ddd; }
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input:-moz-placeholder           { color: #ddd; }
+
+/* Current layout breaks on smaller screens - adding a breakpoint or two */
+@media screen and (max-width: 800px) {
+    #tabzilla-panel.tabzilla-opened {
+        height: 280px;
+    }
+    #tabzilla-promo {
+        width: 100%;
+        float: left;
+        height: auto;
+    }
+    #tabzilla-promo .snippet {
+        padding: 20px;
+    }
+    #tabzilla-panel #tabzilla-nav ul li {
+        margin-top: 20px;
+        height: auto;
+        width: 20%;
+        /* all browsers that support mq's will also support this */
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input {
+        width: 100%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+@media screen and (max-width: 500px) {
+    #tabzilla-panel.tabzilla-opened {
+        height: 540px;
+    }
+    #tabzilla-panel #tabzilla-nav ul li {
+        width: 100%;
+        margin-top: 10px;
+    }
+    #tabzilla-panel #tabzilla-nav ul li:first-child {
+        margin-top: 20px;
+    }
+    #tabzilla-panel #tabzilla-nav ul li ul li {
+        float: left;
+        width: auto;
+        margin-top: 0 !important; /* I know this sucks */
+    }
+    /* making the links and search hopefully easier to select */
+    #tabzilla-panel #tabzilla-nav li ul a {
+        padding: 10px 20px;
+    }
+    #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input {
+        padding: 10px;
+    }
+}
+@media screen and (min-width: 992px) {
+    #tabzilla-contents {
+        left: 50%;
+        position: absolute;
+        margin-left: -486px;
+        width: 992px;
+    }
+    #tabzilla-promo {
+        width: 300px;
+    }
+    #tabzilla-panel #tabzilla-nav ul li {
+        width: 135px;
+    }
+}
