@@ -85,7 +85,7 @@ function Tabzilla()
 Tabzilla.READY_POLL_INTERVAL = 40;
 Tabzilla.readyInterval = null;
 Tabzilla.jQueryCDNSrc =
-    '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
+    '//www.mozilla.org/media/js/libs/jquery-1.7.1.min.js';
 
 Tabzilla.hasCSSTransitions = (function() {
     var div = document.createElement('div');
@@ -341,16 +341,16 @@ Tabzilla.preventDefault = function(ev)
 Tabzilla.content =
     '<div id="tabzilla-contents">'
     + '  <div id="tabzilla-promo">'
-    + '    <div class="snippet">'
-    + '      <h4>Welcome!</h4>'
-    + '      <p>Wherever you’re going in the Mozilla Web universe, this is your starting place. Happy exploring!</p>'
+    + '    <div class="snippet" id="tabzilla-promo-flicks">'
+    + '    <a href="https://firefoxflicks.mozilla.org/en-US/?WT.mc_id=fff1enus&WT.mc_ev=click">'
+    + '      Great prizes! Hollywood judges! Exclamation marks! Enter Firefox Flicks, the global video contest to tell our story, or vote for your favorites!</a>'
     + '    </div>'
     + '  </div>'
     + '  <div id="tabzilla-nav">'
     + '    <ul>'
     + '      <li><h2>Mozilla</h2>'
     + '        <ul>'
-    + '          <li><a href="http://www.mozilla.org/about/mission.html">Mission</a></li>'
+    + '          <li><a href="http://www.mozilla.org/mission/">Mission</a></li>'
     + '          <li><a href="http://www.mozilla.org/about/">About</a></li>'
     + '          <li><a href="http://www.mozilla.org/projects/">Projects</a></li>'
     + '          <li><a href="http://support.mozilla.org/">Support</a></li>'
@@ -372,10 +372,9 @@ Tabzilla.content =
     + '      <li><h2>Get Involved</h2>'
     + '        <ul>'
     + '          <li><a href="http://www.mozilla.org/contribute/">Volunteer</a></li>'
-    + '          <li><a href="http://www.mozilla.org/en-US/about/careers.html">Work</a></li>'
+    + '          <li><a href="http://www.mozilla.org/en-US/about/careers.html">Careers</a></li>'
     + '          <li><a href="http://www.mozilla.org/en-US/about/mozilla-spaces/">Find us</a></li>'
     + '          <li><a href="https://donate.mozilla.org/">Join us</a></li>'
-    + '          <li><a href="http://www.mozilla.org/contribute/">Learn more</a></li>'
     + '        </ul>'
     + '      </li>'
     + '      <li id="tabzilla-search">'

@@ -62,7 +62,7 @@
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    order-radius: 8px;
+    border-radius: 8px;
 }
 
 #tabzilla.tabzilla-opened:after {
@@ -89,6 +89,7 @@
     -ms-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     overflow: hidden;
+    direction: ltr;
 }
 
 #tabzilla-panel.tabzilla-opened {
@@ -198,6 +199,12 @@
     outline: 0;
 }
 
+#tabzilla-panel #tabzilla-nav a,
+#tabzilla-panel #tabzilla-nav a:link,
+#tabzilla-panel #tabzilla-nav a:visited {
+    text-decoration: none;
+}
+
 #tabzilla-panel #tabzilla-nav a:hover,
 #tabzilla-panel #tabzilla-nav a:active,
 #tabzilla-panel #tabzilla-nav a:focus {
@@ -245,3 +252,30 @@
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input::-webkit-input-placeholder { color: #ddd; }
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input:-moz-placeholder           { color: #ddd; }
+
+/* Firefox Flicks Promo */
+
+#tabzilla-promo .snippet {
+    padding: 0;
+}
+
+#tabzilla-promo .snippet a {
+    display: block;
+    padding: 40px 35px 40px 95px;
+    height: 130px;
+    background-image: url(//www.mozilla.org/tabzilla/media/img/promo-flicks.png);
+    background-position: 20px 37px;
+    background-repeat: no-repeat;
+    color: #484848;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#tabzilla-promo .snippet a:hover,
+#tabzilla-promo .snippet a:active {
+    text-decoration: none;
+    background-color: #f0f0f0;
+}
