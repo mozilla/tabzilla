@@ -132,6 +132,12 @@
         // Change the locale-selector's reference to actual DOM element now
         Tabzilla.l10n.selector = document.getElementById('tabzilla-locale');
 
+        // Read the preferred locale & preset content
+        if ( $("#tabzilla").data("locale") ) {
+            Tabzilla.l10n.now = $("#tabzilla").data("locale");
+            Tabzilla.l10n.loadLocale();
+        }
+
         // Set up event listener for the locale-selector
         Tabzilla.addEventListener(Tabzilla.l10n.selector, 'change', function(e) {
             Tabzilla.l10n.now = $(Tabzilla.l10n.selector).val();

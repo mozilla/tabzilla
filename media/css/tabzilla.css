@@ -253,6 +253,12 @@
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input::-webkit-input-placeholder { color: #ddd; }
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input:-moz-placeholder           { color: #ddd; }
 
+#tabzilla-panel #tabzilla-nav ul li#tabzilla-search select  {
+    color: #484848;
+    margin: 0.4em 20px;
+    text-transform: none;
+}
+
 /* Firefox Flicks Promo */
 
 #tabzilla-promo .snippet {
