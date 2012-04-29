@@ -18,6 +18,8 @@
 
         "all"   : { // List of all available locale
             "en-US":    "English",
+            "bn-IN":    "বাংলা",
+            "de-DE":    "Deutsch",
         },
 
         "en-US" : { // Locale strings for US English
@@ -46,6 +48,62 @@
 
             // Locale for Firefox Flicks Promotions
             firefoxFlicks:      "Great prizes! Hollywood judges! Exclamation marks! Enter Firefox Flicks, the global video contest to tell our story, or vote for your favorites!",
+        },
+
+        "bn-IN" : { // Locale strings for Indian Bengali
+
+            // Title Strings
+            titleMozilla:       "Mozilla",
+            titleProducts:      "Products",
+            titleInnovation:    "উদ্ভাবনা",
+            titleGetInvolved:   "লিপ্ত হউন",
+
+            // Link Strings
+            linkMission:        "অভিলক্ষ্য",
+            linkAbout:          "সম্বন্ধে",
+            linkProjects:       "প্রকল্প",
+            linkSupport:        "সহায়তা",
+            linkMDN:            "Developer Network",
+            linkFirefox:        "Firefox",
+            linkThunderbird:    "Thunderbird",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "গবেষণাগার",
+            linkVolunteers:     "স্বেচ্ছাসেবক",
+            linkCareers:        "পেশা",
+            linkFindUs:         "খুঁজে নিন",
+            linkJoinUs:         "যোগ দিন",
+            linkWebDir:         "Website Directory",
+
+            // Locale for Firefox Flicks Promotions
+            firefoxFlicks:      "দারুন পুরস্কার! হলিউডের বিচারক! রামগরুরের ছানা! আরো অনেক কিছু! Firefox Flicks &mdash; এই বিশ্বব্যাপী চলচিত্র প্রতিযোগিতায় যোগ দাও, অথবা পছন্দের প্রতিযোগী কে মনোনীত কর!",
+        },
+
+        "de-DE" : { // Locale strings for Germany German
+
+            // Title Strings
+            titleMozilla:       "Mozilla",
+            titleProducts:      "Projekte",
+            titleInnovation:    "Innovationen",
+            titleGetInvolved:   "Machen Sie mit",
+
+            // Link Strings
+            linkMission:        "Erfahren Sie mehr",
+            linkAbout:          "Über uns",
+            linkProjects:       "Projekte",
+            linkSupport:        "Unterstützung",
+            linkMDN:            "Entwicklernetzwerk",
+            linkFirefox:        "Firefox",
+            linkThunderbird:    "Thunderbird",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "Labs",
+            linkVolunteers:     "Helfen Sie uns",
+            linkCareers:        "Jobangebote",
+            linkFindUs:         "Finden Sie uns",
+            linkJoinUs:         "Helfen Sie uns",
+            linkWebDir:         "Webseitenverzeichnis",
+
+            // Locale for Firefox Flicks Promotions
+            firefoxFlicks:      "Tolle Preise! Hollywood judges! Viele Ausrufezeichen! Machen Sie bei Firefox Flicks mit, einem globalen Videowettbewerb um unsere Geschichte zu erzählen, oder stimmen Sie für Ihre Favoriten ab!",
         },
 
     };
