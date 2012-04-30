@@ -18,8 +18,9 @@
 
         "all"   : { // List of all available locale
             "en-US":    "English",
-            "bn-IN":    "বাংলা",
-            "de-DE":    "Deutsch",
+            "bn":       "বাংলা (ভারত)",
+            "de":       "Deutsch",
+            "pl":       "Polski",
             "pt-BR":    "Português (Brasil)"
         },
 
@@ -51,7 +52,7 @@
             firefoxFlicks:      "Great prizes! Hollywood judges! Exclamation marks! Enter Firefox Flicks, the global video contest to tell our story, or vote for your favorites!"
         },
 
-        "bn-IN" : { // Locale strings for Indian Bengali
+        "bn"    : { // Locale strings for Indian Bengali
 
             // Title Strings
             titleMozilla:       "Mozilla",
@@ -79,7 +80,7 @@
             firefoxFlicks:      "দারুন পুরস্কার! হলিউডের বিচারক! রামগরুরের ছানা! আরো অনেক কিছু! Firefox Flicks &mdash; এই বিশ্বব্যাপী চলচিত্র প্রতিযোগিতায় যোগ দাও, অথবা পছন্দের প্রতিযোগী কে মনোনীত কর!"
         },
 
-        "de-DE" : { // Locale strings for Germany German
+        "de"    : { // Locale strings for German
 
             // Title Strings
             titleMozilla:       "Mozilla",
@@ -105,6 +106,34 @@
 
             // Locale for Firefox Flicks Promotions
             firefoxFlicks:      "Tolle Preise! Hollywood judges! Viele Ausrufezeichen! Machen Sie bei Firefox Flicks mit, einem globalen Videowettbewerb um unsere Geschichte zu erzählen, oder stimmen Sie für Ihre Favoriten ab!"
+        },
+
+        "pl"    : { // Locale strings for Polish
+
+            // Title Strings
+            titleMozilla:       "Mozilla",
+            titleProducts:      "Produkty",
+            titleInnovation:    "Innowacje",
+            titleGetInvolved:   "Zaangażuj się",
+
+            // Link Strings
+            linkMission:        "Misja",
+            linkAbout:          "O nas",
+            linkProjects:       "Projekty",
+            linkSupport:        "Wsparcie",
+            linkMDN:            "Developer Network",
+            linkFirefox:        "Firefox",
+            linkThunderbird:    "Thunderbird",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "Labs",
+            linkVolunteers:     "Wolontariat",
+            linkCareers:        "Kariera",
+            linkFindUs:         "Znajdź nas",
+            linkJoinUs:         "Dołącz do nas",
+            linkWebDir:         "Lista stron",
+
+            // Locale for Firefox Flicks Promotions
+            firefoxFlicks:      "Fantastyczne nagrody! Sędziowie prosto z Hollywood! Okrzyki! Weź udział w konkursie Firefox Flicks. Opowiedz swoją historię, lub zagłosuj na swojego faworyta!"
         },
 
         "pt-BR" : { // Locale strings for Brazillian Portuguese
