@@ -20,6 +20,7 @@
             "en-US":    "English",
             "bn-IN":    "বাংলা",
             "de-DE":    "Deutsch",
+            "pt-BR":    "Português (Brasil)"
         },
 
         "en-US" : { // Locale strings for US English
@@ -47,7 +48,7 @@
             linkWebDir:         "Website Directory",
 
             // Locale for Firefox Flicks Promotions
-            firefoxFlicks:      "Great prizes! Hollywood judges! Exclamation marks! Enter Firefox Flicks, the global video contest to tell our story, or vote for your favorites!",
+            firefoxFlicks:      "Great prizes! Hollywood judges! Exclamation marks! Enter Firefox Flicks, the global video contest to tell our story, or vote for your favorites!"
         },
 
         "bn-IN" : { // Locale strings for Indian Bengali
@@ -75,7 +76,7 @@
             linkWebDir:         "Website Directory",
 
             // Locale for Firefox Flicks Promotions
-            firefoxFlicks:      "দারুন পুরস্কার! হলিউডের বিচারক! রামগরুরের ছানা! আরো অনেক কিছু! Firefox Flicks &mdash; এই বিশ্বব্যাপী চলচিত্র প্রতিযোগিতায় যোগ দাও, অথবা পছন্দের প্রতিযোগী কে মনোনীত কর!",
+            firefoxFlicks:      "দারুন পুরস্কার! হলিউডের বিচারক! রামগরুরের ছানা! আরো অনেক কিছু! Firefox Flicks &mdash; এই বিশ্বব্যাপী চলচিত্র প্রতিযোগিতায় যোগ দাও, অথবা পছন্দের প্রতিযোগী কে মনোনীত কর!"
         },
 
         "de-DE" : { // Locale strings for Germany German
@@ -103,8 +104,38 @@
             linkWebDir:         "Webseitenverzeichnis",
 
             // Locale for Firefox Flicks Promotions
-            firefoxFlicks:      "Tolle Preise! Hollywood judges! Viele Ausrufezeichen! Machen Sie bei Firefox Flicks mit, einem globalen Videowettbewerb um unsere Geschichte zu erzählen, oder stimmen Sie für Ihre Favoriten ab!",
+            firefoxFlicks:      "Tolle Preise! Hollywood judges! Viele Ausrufezeichen! Machen Sie bei Firefox Flicks mit, einem globalen Videowettbewerb um unsere Geschichte zu erzählen, oder stimmen Sie für Ihre Favoriten ab!"
         },
+
+        "pt-BR" : { // Locale strings for Brazillian Portuguese
+
+            // Title Strings
+            titleMozilla:       "Mozilla",
+            titleProducts:      "Produtos",
+            titleInnovation:    "Inovação",
+            titleGetInvolved:   "Participe",
+
+            // Link Strings
+            linkMission:        "Missão",
+            linkAbout:          "Sobre",
+            linkProjects:       "Projetos",
+            linkSupport:        "Suporte",
+            linkMDN:            "Developer Network",
+            linkFirefox:        "Firefox",
+            linkThunderbird:    "Thunderbird",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "Labs",
+            linkVolunteers:     "Colaboradores",
+            linkCareers:        "Oportunidades",
+            linkFindUs:         "Encontre-nos",
+            linkJoinUs:         "Faça parte",
+            linkWebDir:         "Diretório de Sites",
+
+            // Locale for Firefox Flicks Promotions
+            firefoxFlicks:      "Ótimos prêmios! Juízes de Hollywood! Pontos de exclamação! Participe do Firefox Flicks, o concurso global de vídeo para contar a sua história, ou vote nos seus favoritos!"
+        }
+
+
 
     };
 
