@@ -24,7 +24,7 @@
             "pt":       "Português"
         },
 
-        "en-US" : { // Locale strings for US English
+        "en" : { // Locale strings for US English
 
             // Title Strings
             titleMozilla:       "Mozilla",
