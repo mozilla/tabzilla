@@ -341,9 +341,9 @@ Tabzilla.preventDefault = function(ev)
 Tabzilla.content =
     '<div id="tabzilla-contents">'
     + '  <div id="tabzilla-promo">'
-    + '    <div class="snippet" id="tabzilla-promo-flicks">'
-    + '    <a href="https://firefoxflicks.mozilla.org/en-US/?WT.mc_id=fff1enus&WT.mc_ev=click">'
-    + '      Great prizes! Hollywood judges! Exclamation marks! Enter Firefox Flicks, the global video contest to tell our story, or vote for your favorites!</a>'
+    + '    <div class="snippet" id="tabzilla-promo-theden">'
+    + '    <a href="http://blog.mozilla.org/theden/">'
+    + '      Visit <b>the Den</b> for tips, tricks and other tidbits to help you get the most out of your Firefox browsing experience.</a>'
     + '    </div>'
     + '  </div>'
     + '  <div id="tabzilla-nav">'
