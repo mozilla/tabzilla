@@ -17,11 +17,11 @@
         "now"   : "en-US", // The current-locale, default to en-US
 
         "all"   : { // List of all available locale
-            "en-US":    "English",
-            "bn":       "বাংলা (ভারত)",
+            "en":       "English",
+            "bn":       "বাংলা",
             "de":       "Deutsch",
             "pl":       "Polski",
-            "pt-BR":    "Português (Brasil)"
+            "pt":       "Português"
         },
 
         "en-US" : { // Locale strings for US English
@@ -52,7 +52,7 @@
             firefoxFlicks:      "Great prizes! Hollywood judges! Exclamation marks! Enter Firefox Flicks, the global video contest to tell our story, or vote for your favorites!"
         },
 
-        "bn"    : { // Locale strings for Indian Bengali
+        "bn"    : { // Locale strings for Bengali
 
             // Title Strings
             titleMozilla:       "Mozilla",
@@ -136,7 +136,7 @@
             firefoxFlicks:      "Fantastyczne nagrody! Sędziowie prosto z Hollywood! Okrzyki! Weź udział w konkursie Firefox Flicks. Opowiedz swoją historię, lub zagłosuj na swojego faworyta!"
         },
 
-        "pt-BR" : { // Locale strings for Brazillian Portuguese
+        "pt" : { // Locale strings for Portuguese
 
             // Title Strings
             titleMozilla:       "Mozilla",
