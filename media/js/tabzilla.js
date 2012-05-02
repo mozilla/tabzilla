@@ -342,7 +342,7 @@ Tabzilla.content =
     '<div id="tabzilla-contents">'
     + '  <div id="tabzilla-promo">'
     + '    <div class="snippet" id="tabzilla-promo-theden">'
-    + '    <a href="http://blog.mozilla.org/theden/">'
+    + '    <a href="http://blog.mozilla.org/theden?WT.mc_id=dentabzilla&amp;WT.mc_ev=click">'
     + '      Visit <b>the Den</b> for tips, tricks and other tidbits to help you get the most out of your Firefox browsing experience.</a>'
     + '    </div>'
     + '  </div>'
