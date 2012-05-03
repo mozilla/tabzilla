@@ -264,7 +264,7 @@
             linkMission:        "使命",
             linkAbout:          "關於",
             linkProjects:       "專案",
-            linkSupport:        "技術資源",
+            linkSupport:        "技術支援",
             linkMDN:            "開發者網路",
             linkFirefox:        "Firefox",
             linkThunderbird:    "Thunderbird",
