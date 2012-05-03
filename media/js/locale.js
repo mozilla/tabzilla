@@ -21,6 +21,7 @@
             "bn":       "বাংলা",
             "de":       "Deutsch",
             "es":       "Española",
+            "fy":       "Frysk",
             "he":       "עברית",
             "nl":       "Nederlands",
             "pl":       "Polski",
@@ -139,6 +140,33 @@
 
             // Locale for Firefox Flicks Promotions
             firefoxFlicks:      "¡Grandes premios! ¡Un jurado de estrellas de Hollywood! ¡Participa en Firefox Flicks, el concurso mundial de vídeos para contar nuestra historia, o vota a tus favoritos!"
+        },
+
+        "fy" : { // Locale strings for Frisian
+            // Title Strings
+            titleMozilla:       "Mozilla",
+            titleProducts:      "Produkten",
+            titleInnovation:    "Ynnovaasje",
+            titleGetInvolved:   "Doch mei",
+
+            // Link Strings
+            linkMission:        "Missy",
+            linkAbout:          "Oer",
+            linkProjects:       "Projekten",
+            linkSupport:        "Stipe",
+            linkMDN:            "Untwikkelersnetwurk",
+            linkFirefox:        "Firefox",
+            linkThunderbird:    "Thunderbird",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "Labs",
+            linkVolunteers:     "Frijwilligers",
+            linkCareers:        "Fakatueres",
+            linkFindUs:         "Fyn ús",
+            linkJoinUs:         "Meidwaan",
+            linkWebDir:         "Website oersjoch",
+
+            // Locale for Firefox Flicks Promotions
+            firefoxFlicks:      "Grutte prizen! Hollywood sjuery! Utroptekens! Besjoch Firefox Flicks, de wrâldwide fideowedstryd om ús ferhaal te fertellen, of stim op jo favoryt!"
         },
 
         "he"    : { // Locale strings for Hebrew
