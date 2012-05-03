@@ -21,7 +21,7 @@
             "bn":       "বাংলা",
             "de":       "Deutsch",
             "es":       "Española",
-            "he":       "Hebrew",
+            "he":       "עברית",
             "pl":       "Polski",
             "pt":       "Português",
             "ta":       "Tamil"
