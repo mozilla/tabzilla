@@ -24,7 +24,8 @@
             "he":       "עברית",
             "pl":       "Polski",
             "pt":       "Português",
-            "ta":       "Tamil"
+            "ta":       "Tamil",
+            "zh":       "中文"
         },
 
         "en" : { // Locale strings for US English
@@ -249,6 +250,34 @@
 
             // Locale for Firefox Flicks Promotions
             firefoxFlicks:      "அற்புதமானப் பரிசுகள்! ஹாலிவுட் இயக்குனர்கள் நீதிபதிகளாக! பங்கேற்பீர் Firefox Flicks, உலகெங்கும் நடக்கும் வீடியோப் போட்டியில் கலந்துநம் வெற்றிக் கதையை உலகிற்கு எடுத்துறைபீர், அல்லது உங்களுக்கு பிடித்தமானவைக்கு வாக்களிப்பீர்"
+        },
+
+        "zh" : { // Locale strings for Chinese Traditional
+
+            // Title Strings
+            titleMozilla:       "Mozilla",
+            titleProducts:      "產品",
+            titleInnovation:    "創新",
+            titleGetInvolved:   "參與其中",
+
+            // Link Strings
+            linkMission:        "使命",
+            linkAbout:          "關於",
+            linkProjects:       "專案",
+            linkSupport:        "技術資源",
+            linkMDN:            "開發者網路",
+            linkFirefox:        "Firefox",
+            linkThunderbird:    "Thunderbird",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "實驗室",
+            linkVolunteers:     "志工",
+            linkCareers:        "工作機會",
+            linkFindUs:         "尋找我們",
+            linkJoinUs:         "加入我們",
+            linkWebDir:         "網站目錄",
+
+            // Locale for Firefox Flicks Promotions
+            firefoxFlicks:      "超棒的大獎、好萊塢評審、讓眾人驚嘆！ 請參加 Firefox Flicks，一個讓您述說我 們故事的全球性短片競賽。您也可以參加 投出您最愛的短片！"
         }
 
     };
