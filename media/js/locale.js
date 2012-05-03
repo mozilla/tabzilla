@@ -20,6 +20,7 @@
             "en":       "English",
             "bn":       "বাংলা",
             "de":       "Deutsch",
+            "he":       "Hebrew",
             "pl":       "Polski",
             "pt":       "Português",
             "ta":       "Tamil"
@@ -107,6 +108,34 @@
 
             // Locale for Firefox Flicks Promotions
             firefoxFlicks:      "Tolle Preise! Hollywood judges! Viele Ausrufezeichen! Machen Sie bei Firefox Flicks mit, einem globalen Videowettbewerb um unsere Geschichte zu erzählen, oder stimmen Sie für Ihre Favoriten ab!"
+        },
+
+        "he"    : { // Locale strings for Hebrew
+
+            // Title Strings
+            titleMozilla:       "Mozilla",
+            titleProducts:      "מוצרים",
+            titleInnovation:    "חדשנות",
+            titleGetInvolved:   "היו מעורבים",
+
+            // Link Strings
+            linkMission:        "משימה",
+            linkAbout:          "אודות",
+            linkProjects:       "מיזמים",
+            linkSupport:        "תמיכה",
+            linkMDN:            "Developer Network",
+            linkFirefox:        "Firefox",
+            linkThunderbird:    "Thunderbird",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "Labs",
+            linkVolunteers:     "מתנדבים",
+            linkCareers:        "קריירה",
+            linkFindUs:         "מצאו אותנו",
+            linkJoinUs:         "הצטרפו אלינו",
+            linkWebDir:         "מדריך אתרים",
+
+            // Locale for Firefox Flicks Promotions
+            firefoxFlicks:      "פרסים גדולים! שופטים מהוליווד! סימני קריאה! היכנסו אל Firefox Flicks, תחרות וידאו עולמית שמטרתה לספר את סיפורנו, או הצביעו למועדפים עליכם!"
         },
 
         "pl"    : { // Locale strings for Polish
