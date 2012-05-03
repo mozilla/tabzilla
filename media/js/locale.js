@@ -21,7 +21,8 @@
             "bn":       "বাংলা",
             "de":       "Deutsch",
             "pl":       "Polski",
-            "pt":       "Português"
+            "pt":       "Português",
+            "ta":       "Tamil"
         },
 
         "en" : { // Locale strings for US English
