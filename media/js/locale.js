@@ -162,9 +162,35 @@
 
             // Locale for Firefox Flicks Promotions
             firefoxFlicks:      "Ótimos prêmios! Juízes de Hollywood! Pontos de exclamação! Participe do Firefox Flicks, o concurso global de vídeo para contar a sua história, ou vote nos seus favoritos!"
+        },
+
+        "ta" : { // Locale strings for Tamil
+
+            // Title Strings
+            titleMozilla:       "மொசில்லா",
+            titleProducts:      "தயாரிப்புகள்",
+            titleInnovation:    "புதுமை ",
+            titleGetInvolved:   "ஈடுபடுங்கள் ",
+
+            // Link Strings
+            linkMission:        "குறிக்கோள் ",
+            linkAbout:          "எங்களை பற்றி",
+            linkProjects:       "திட்டங்கள்",
+            linkSupport:        "ஆதரவு",
+            linkMDN:            "உருவாக்கிகள் பிணையம் ",
+            linkFirefox:        "ஃபயர் ஃபாக்சு",
+            linkThunderbird:    "தண்டர்பேர்டு",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "ஆய்வுக்கூடங்கள் ",
+            linkVolunteers:     "தொண்டூழியர்கள்",
+            linkCareers:        "பணித்துறை ",
+            linkFindUs:         "எங்களைக்காணுங்கள்   ",
+            linkJoinUs:         "எங்களுடன்சேருங்கள் ",
+            linkWebDir:         "இணையதள அடைவு ",
+
+            // Locale for Firefox Flicks Promotions
+            firefoxFlicks:      "அற்புதமானப் பரிசுகள்! ஹாலிவுட் இயக்குனர்கள் நீதிபதிகளாக! பங்கேற்பீர் Firefox Flicks, உலகெங்கும் நடக்கும் வீடியோப் போட்டியில் கலந்துநம் வெற்றிக் கதையை உலகிற்கு எடுத்துறைபீர், அல்லது உங்களுக்கு பிடித்தமானவைக்கு வாக்களிப்பீர்"
         }
-
-
 
     };
 
