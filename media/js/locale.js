@@ -20,6 +20,7 @@
             "en":       "English",
             "bn":       "বাংলা",
             "de":       "Deutsch",
+            "es":       "Española",
             "he":       "Hebrew",
             "pl":       "Polski",
             "pt":       "Português",
@@ -108,6 +109,34 @@
 
             // Locale for Firefox Flicks Promotions
             firefoxFlicks:      "Tolle Preise! Hollywood judges! Viele Ausrufezeichen! Machen Sie bei Firefox Flicks mit, einem globalen Videowettbewerb um unsere Geschichte zu erzählen, oder stimmen Sie für Ihre Favoriten ab!"
+        },
+
+        "es" : { // Locale strings for Spanish
+
+            // Title Strings
+            titleMozilla:       "Mozilla",
+            titleProducts:      "Productos",
+            titleInnovation:    "Innovación",
+            titleGetInvolved:   "Involúcrate",
+
+            // Link Strings
+            linkMission:        "Misión",
+            linkAbout:          "Acerca de",
+            linkProjects:       "Proyectos",
+            linkSupport:        "Asistencia",
+            linkMDN:            "Developer Network",
+            linkFirefox:        "Firefox",
+            linkThunderbird:    "Thunderbird",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "Labs",
+            linkVolunteers:     "Voluntarios",
+            linkCareers:        "Trabajos",
+            linkFindUs:         "Encuéntranos",
+            linkJoinUs:         "Únete",
+            linkWebDir:         "Directorio del sitio",
+
+            // Locale for Firefox Flicks Promotions
+            firefoxFlicks:      "¡Grandes premios! ¡Un jurado de estrellas de Hollywood! ¡Participa en Firefox Flicks, el concurso mundial de vídeos para contar nuestra historia, o vota a tus favoritos!"
         },
 
         "he"    : { // Locale strings for Hebrew
