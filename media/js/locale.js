@@ -26,7 +26,7 @@
             "nl":       "Nederlands",
             "pl":       "Polski",
             "pt":       "Português",
-            "ta":       "Tamil",
+            "ta":       "தமிழ்",
             "zh":       "中文"
         },
 
