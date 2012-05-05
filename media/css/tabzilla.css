@@ -105,6 +105,12 @@
     left: 50%;
     margin-left: -486px;
     right: 0;
+    display:none;
+}
+
+.tabzilla-opened #tabzilla-contents,
+.open #tabzilla-contents{
+    display:block;
 }
 
 * html #tabzilla-contents             { zoom: 1; } /* IE6 */
@@ -248,6 +254,15 @@
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input:focus {
     outline: 0;
     border-color: #999;
+}
+
+#aria-announce{
+    position:absolute;
+    height:1px;
+    width:1px; 
+    overflow:hidden;
+    clip:rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip:rect(1px, 1px, 1px, 1px);
 }
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input::-webkit-input-placeholder { color: #ddd; }

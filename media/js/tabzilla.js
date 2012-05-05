@@ -245,6 +245,8 @@ Tabzilla.init = function()
         Tabzilla.toggle();
     });
 
+    Tabzilla.$announce = jQuery("#aria-announce");
+
     Tabzilla.$panel = jQuery(Tabzilla.panel);
     Tabzilla.$link  = jQuery(Tabzilla.link);
 
@@ -253,7 +255,29 @@ Tabzilla.init = function()
     Tabzilla.$panel.removeClass('tabzilla-opened');
     Tabzilla.$link.removeClass('tabzilla-opened');
 
+    Tabzilla.$link.attr("role","button");
+
     Tabzilla.opened = false;
+
+    Tabzilla.$link.focus(function() {
+        if (!Tabzilla.opened){
+            Tabzilla.$announce.html("Click to open up a section with interesting mozilla links");
+        }
+    });
+	Tabzilla.$link.blur(function() {
+        Tabzilla.$announce.html("");
+    });
+    jQuery(document).keydown(function(e) {
+        if (e.which === 27 && Tabzilla.opened) {
+            Tabzilla.toggle();
+        }
+    });
+    Tabzilla.$link.keypress(function(e) {
+        if (e.which === 32) {
+         	Tabzilla.toggle();
+			Tabzilla.preventDefault(e);
+        }
+    });
 };
 
 Tabzilla.buildPanel = function()
@@ -304,9 +328,13 @@ Tabzilla.open = function()
         Tabzilla.$link.removeClass('tabzilla-closed');
     } else {
         // jQuery animation fallback
-        jQuery(Tabzilla.panel).animate({ height: 200 }, 200, 'easeInOut');
+        jQuery(Tabzilla.panel).animate({ height: 200 }, 200, 'easeInOut').toggleClass("open");;
     }
-
+    
+    Tabzilla.$link.attr({"tabindex":"1","aria-flowto":Tabzilla.$panel.attr("id")});
+    Tabzilla.$panel.attr("tabindex","1");
+    Tabzilla.$announce.html("Link section open, use the tab key to move your focus into it. Press escape key to close");
+	
     Tabzilla.opened = true;
 };
 
@@ -323,8 +351,13 @@ Tabzilla.close = function()
         Tabzilla.$link.addClass('tabzilla-closed');
     } else {
         // jQuery animation fallback
-        jQuery(Tabzilla.panel).animate({ height: 0 }, 200, 'easeInOut');
+        jQuery(Tabzilla.panel).animate({ height: 0 }, 200, 'easeInOut').toggleClass("open");
+        
     }
+
+    Tabzilla.$link.attr({"tabindex":"", "aria-flowto":""}).focus();
+    Tabzilla.$panel.attr("tabindex","");
+    Tabzilla.$announce.html("Link section closed");
 
     Tabzilla.opened = false;
 };
@@ -387,6 +420,7 @@ Tabzilla.content =
     + '      </li>'
     + '    </ul>'
     + '  </div>'
-    + '</div>';
+    + '</div>'
+    + '<div role="status" aria-live="polite" id="aria-announce"></div>';
 
 Tabzilla();
