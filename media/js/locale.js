@@ -26,6 +26,7 @@
             "nl":       "Nederlands",
             "pl":       "Polski",
             "pt":       "Português",
+            "sr":       "српски језик",
             "ta":       "தமிழ்",
             "zh":       "中文"
         },
@@ -278,6 +279,34 @@
 
             // Locale for Firefox Flicks Promotions
             firefoxFlicks:      "Ótimos prêmios! Juízes de Hollywood! Pontos de exclamação! Participe do Firefox Flicks, o concurso global de vídeo para contar a sua história, ou vote nos seus favoritos!"
+        },
+
+        "ta" : { // Locale strings for Serbian
+
+            // Title Strings
+            titleMozilla:       "Мозила",
+            titleProducts:      "Производи",
+            titleInnovation:    "Иновације",
+            titleGetInvolved:   "Прикључите се",
+
+            // Link Strings
+            linkMission:        "Мисија",
+            linkAbout:          "О нама",
+            linkProjects:       "Пројекти",
+            linkSupport:        "Подршка",
+            linkMDN:            "Програмерска мрежа",
+            linkFirefox:        "Фајерфокс",
+            linkThunderbird:    "Тандерберд",
+            linkWebFWD:         "ВебФВД",
+            linkLabs:           "Лабораторија",
+            linkVolunteer:      "Волонтирајте",
+            linkCareers:        "Запослење",
+            linkFindUs:         "Нађите нас",
+            linkJoinUs:         "Прикључите се",
+            linkWebDir:         "Директоријум сајтова",
+
+            // Locale for Firefox Flicks Promotions
+            firefoxFlicks:      "Супер награде! Холивудске судије! Прикључите се Фајерфокс Фликс такмичењу и покажите свету Вашу причу, или гласајте за Ваш омиљени видео!"
         },
 
         "ta" : { // Locale strings for Tamil
