@@ -36,7 +36,7 @@
             // Title Strings
             titleMozilla:       "Mozilla",
             titleProducts:      "Products",
-            titleInnovation:    "Innovation",
+            titleInnovation:    "Innovations",
             titleGetInvolved:   "Get Involved",
 
             // Link Strings
@@ -281,7 +281,7 @@
             firefoxFlicks:      "Ótimos prêmios! Juízes de Hollywood! Pontos de exclamação! Participe do Firefox Flicks, o concurso global de vídeo para contar a sua história, ou vote nos seus favoritos!"
         },
 
-        "ta" : { // Locale strings for Serbian
+        "sr" : { // Locale strings for Serbian
 
             // Title Strings
             titleMozilla:       "Мозила",
