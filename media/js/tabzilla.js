@@ -355,8 +355,8 @@ Tabzilla.close = function()
         
     }
 
-    Tabzilla.$link.attr({"tabindex":"", "aria-flowto":""}).focus();
-    Tabzilla.$panel.attr("tabindex","");
+    Tabzilla.$link.removeAttr("tabindex aria-flowto").focus();
+    Tabzilla.$panel.removeAttr("tabindex");
     Tabzilla.$announce.html("Link section closed");
 
     Tabzilla.opened = false;
