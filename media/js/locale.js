@@ -62,29 +62,29 @@
         "bn"    : { // Locale strings for Bengali
 
             // Title Strings
-            titleMozilla:       "Mozilla",
-            titleProducts:      "Products",
+            titleMozilla:       "মোজিলা",
+            titleProducts:      "উৎপণ্য দ্রব্য",
             titleInnovation:    "উদ্ভাবনা",
-            titleGetInvolved:   "লিপ্ত হউন",
+            titleGetInvolved:   "যুক্ত হউন",
 
             // Link Strings
             linkMission:        "অভিলক্ষ্য",
             linkAbout:          "সম্বন্ধে",
             linkProjects:       "প্রকল্প",
             linkSupport:        "সহায়তা",
-            linkMDN:            "Developer Network",
-            linkFirefox:        "Firefox",
-            linkThunderbird:    "Thunderbird",
+            linkMDN:            "ডেভলপার নেটওয়ার্ক",
+            linkFirefox:        "ফায়ারফক্স",
+            linkThunderbird:    "থান্ডারবার্ড",
             linkWebFWD:         "WebFWD",
             linkLabs:           "গবেষণাগার",
             linkVolunteer:      "স্বেচ্ছাসেবক",
             linkCareers:        "পেশা",
-            linkFindUs:         "খুঁজে নিন",
+            linkFindUs:         "খুঁজুন",
             linkJoinUs:         "যোগ দিন",
-            linkWebDir:         "Website Directory",
+            linkWebDir:         "ওয়েব নির্দেশিকা",
 
             // Locale for Firefox Flicks Promotions
-            firefoxFlicks:      "দারুন পুরস্কার! হলিউডের বিচারক! রামগরুরের ছানা! আরো অনেক কিছু! Firefox Flicks &mdash; এই বিশ্বব্যাপী চলচিত্র প্রতিযোগিতায় যোগ দাও, অথবা পছন্দের প্রতিযোগী কে মনোনীত কর!"
+            firefoxFlicks:      "দারুন পুরস্কার! হলিউডের বিচারক! বিচিত্র কাণ্ডকারখানা! ফায়ারফক্স ফ্লিকস, বিশ্বব্যাপী এই চলচ্চিত্র প্রতিযোগিতায় অংশগ্রহন করুন, অথবা আপনার প্রিয় চলচ্চিত্রটিকে ভোট করুন!"
         },
 
         "de"    : { // Locale strings for German
