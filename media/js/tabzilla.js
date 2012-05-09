@@ -259,6 +259,7 @@ Tabzilla.init = function()
     Tabzilla.$panel.removeClass('tabzilla-opened');
     Tabzilla.$link.removeClass('tabzilla-opened');
 
+    Tabzilla.$panel.attr("tabindex","-1");
     Tabzilla.$link.attr("role","button");
 
     Tabzilla.opened = false;
@@ -279,8 +280,8 @@ Tabzilla.init = function()
     });
     Tabzilla.$link.keypress(function(e) {
         if (e.which === 32) {
-         	Tabzilla.toggle();
-			Tabzilla.preventDefault(e);
+            Tabzilla.toggle();
+            Tabzilla.preventDefault(e);
         }
     });
     Tabzilla.$panel.keypress(function(e) {
@@ -342,7 +343,7 @@ Tabzilla.open = function()
         jQuery(Tabzilla.panel).animate({ height: 200 }, 200, 'easeInOut').toggleClass("open");;
     }
     
-    Tabzilla.$panel.attr("tabindex","-1").focus();
+    Tabzilla.$panel.focus();
     Tabzilla.$announce.html(Tabzilla.ARIA_ANNOUNCEMENTS.OPENED);
 	
     Tabzilla.opened = true;
