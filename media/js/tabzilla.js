@@ -268,7 +268,7 @@ Tabzilla.init = function()
             Tabzilla.$announce.html(Tabzilla.ARIA_ANNOUNCEMENTS.CLICK_TO_OPEN);
         }
     });
-	Tabzilla.$link.blur(function() {
+    Tabzilla.$link.blur(function() {
         Tabzilla.$announce.html("");
     });
     jQuery(document).keydown(function(e) {
