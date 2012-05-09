@@ -20,7 +20,7 @@
             "en":       "English",
             "bn":       "বাংলা",
             "de":       "Deutsch",
-            "es":       "Española",
+            "es":       "Español",
             "fy":       "Frysk",
             "he":       "עברית",
             "nl":       "Nederlands",
