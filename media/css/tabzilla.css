@@ -91,6 +91,9 @@
     overflow: hidden;
     direction: ltr;
 }
+#tabzilla-panel:focus{
+	outline:none;
+}
 
 #tabzilla-panel.tabzilla-opened {
     height: 200px;
@@ -256,7 +259,8 @@
     border-color: #999;
 }
 
-#aria-announce{
+#aria-announce,
+#tabzilla-search label{
     position:absolute;
     height:1px;
     width:1px; 

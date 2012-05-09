@@ -83,6 +83,10 @@ function Tabzilla()
 }
 
 Tabzilla.READY_POLL_INTERVAL = 40;
+Tabzilla.ARIA_ANNOUNCEMENTS = {
+    CLICK_TO_OPEN : "Click to open up a section with interesting mozilla links",
+    OPENED: "Link section open, use the tab key to move your focus into it. Press escape key to close"
+}
 Tabzilla.readyInterval = null;
 Tabzilla.jQueryCDNSrc =
     '//www.mozilla.org/media/js/libs/jquery-1.7.1.min.js';
@@ -261,7 +265,7 @@ Tabzilla.init = function()
 
     Tabzilla.$link.focus(function() {
         if (!Tabzilla.opened){
-            Tabzilla.$announce.html("Click to open up a section with interesting mozilla links");
+            Tabzilla.$announce.html(Tabzilla.ARIA_ANNOUNCEMENTS.CLICK_TO_OPEN);
         }
     });
 	Tabzilla.$link.blur(function() {
@@ -270,12 +274,19 @@ Tabzilla.init = function()
     jQuery(document).keydown(function(e) {
         if (e.which === 27 && Tabzilla.opened) {
             Tabzilla.toggle();
+            Tabzilla.$link.focus();
         }
     });
     Tabzilla.$link.keypress(function(e) {
         if (e.which === 32) {
          	Tabzilla.toggle();
 			Tabzilla.preventDefault(e);
+        }
+    });
+    Tabzilla.$panel.keypress(function(e) {
+        if (e.which === 13) {
+         	Tabzilla.toggle();
+			Tabzilla.$link.focus();
         }
     });
 };
@@ -331,9 +342,8 @@ Tabzilla.open = function()
         jQuery(Tabzilla.panel).animate({ height: 200 }, 200, 'easeInOut').toggleClass("open");;
     }
     
-    Tabzilla.$link.attr({"tabindex":"1","aria-flowto":Tabzilla.$panel.attr("id")});
-    Tabzilla.$panel.attr("tabindex","1");
-    Tabzilla.$announce.html("Link section open, use the tab key to move your focus into it. Press escape key to close");
+    Tabzilla.$panel.attr("tabindex","-1").focus();
+    Tabzilla.$announce.html(Tabzilla.ARIA_ANNOUNCEMENTS.OPENED);
 	
     Tabzilla.opened = true;
 };
@@ -354,10 +364,6 @@ Tabzilla.close = function()
         jQuery(Tabzilla.panel).animate({ height: 0 }, 200, 'easeInOut').toggleClass("open");
         
     }
-
-    Tabzilla.$link.removeAttr("tabindex aria-flowto").focus();
-    Tabzilla.$panel.removeAttr("tabindex");
-    Tabzilla.$announce.html("Link section closed");
 
     Tabzilla.opened = false;
 };
@@ -415,6 +421,7 @@ Tabzilla.content =
     + '        <form title="Search Mozilla sites" action="http://www.google.com/cse">'
     + '          <input type="hidden" value="002443141534113389537:ysdmevkkknw" name="cx">'
     + '          <input type="hidden" value="FORID:0" name="cof">'
+    + '          <label for="q">Search</label>'
     + '          <input type="search" placeholder="Search" id="q" name="q">'
     + '        </form>'
     + '      </li>'
