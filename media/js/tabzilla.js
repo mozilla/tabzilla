@@ -337,7 +337,7 @@ Tabzilla.open = function()
     }
     
     Tabzilla.$link.attr({
-	    "aria-expanded": "true",
+        "aria-expanded": "true",
         "title": Tabzilla.LINK_TITLE.OPENED
     });
     Tabzilla.$panel.focus();
@@ -364,7 +364,7 @@ Tabzilla.close = function()
     }
 
     Tabzilla.$link.attr({
-	    "aria-expanded": "false",
+        "aria-expanded": "false",
         "title": Tabzilla.LINK_TITLE.CLOSED
     });
     Tabzilla.opened = false;
