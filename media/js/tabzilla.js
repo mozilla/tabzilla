@@ -266,7 +266,6 @@ Tabzilla.init = function()
     jQuery(document).keydown(function(e) {
         if (e.which === 27 && Tabzilla.opened) {
             Tabzilla.toggle();
-            Tabzilla.$link.focus();
         }
     });
     Tabzilla.$link.keypress(function(e) {
@@ -278,7 +277,6 @@ Tabzilla.init = function()
     Tabzilla.$panel.keypress(function(e) {
         if (e.which === 13) {
             Tabzilla.toggle();
-            Tabzilla.$link.focus();
         }
     });
 };
