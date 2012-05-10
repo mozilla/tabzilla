@@ -259,7 +259,7 @@ Tabzilla.init = function()
         "aria-expanded": "false",
         "aria-controls": Tabzilla.$panel.attr("id"),
         "title": "Click to open up a section with even more interesting mozilla links"
-	});
+    });
 
     Tabzilla.opened = false;
 
@@ -421,7 +421,6 @@ Tabzilla.content =
     + '      </li>'
     + '    </ul>'
     + '  </div>'
-    + '</div>'
-    + '<div role="status" aria-live="polite" id="aria-announce"></div>';
+    + '</div>';
 
 Tabzilla();
