@@ -83,10 +83,6 @@ function Tabzilla()
 }
 
 Tabzilla.READY_POLL_INTERVAL = 40;
-Tabzilla.ARIA_ANNOUNCEMENTS = {
-    CLICK_TO_OPEN : "Click to open up a section with interesting mozilla links",
-    OPENED: "Link section open, use the tab key to move your focus into it. Press escape key to close"
-}
 Tabzilla.readyInterval = null;
 Tabzilla.jQueryCDNSrc =
     '//www.mozilla.org/media/js/libs/jquery-1.7.1.min.js';
@@ -249,8 +245,6 @@ Tabzilla.init = function()
         Tabzilla.toggle();
     });
 
-    Tabzilla.$announce = jQuery("#aria-announce");
-
     Tabzilla.$panel = jQuery(Tabzilla.panel);
     Tabzilla.$link  = jQuery(Tabzilla.link);
 
@@ -260,18 +254,15 @@ Tabzilla.init = function()
     Tabzilla.$link.removeClass('tabzilla-opened');
 
     Tabzilla.$panel.attr("tabindex","-1");
-    Tabzilla.$link.attr("role","button");
+    Tabzilla.$link.attr({
+        "role": "button",
+        "aria-expanded": "false",
+        "aria-controls": Tabzilla.$panel.attr("id"),
+        "title": "Click to open up a section with even more interesting mozilla links"
+	});
 
     Tabzilla.opened = false;
 
-    Tabzilla.$link.focus(function() {
-        if (!Tabzilla.opened){
-            Tabzilla.$announce.html(Tabzilla.ARIA_ANNOUNCEMENTS.CLICK_TO_OPEN);
-        }
-    });
-    Tabzilla.$link.blur(function() {
-        Tabzilla.$announce.html("");
-    });
     jQuery(document).keydown(function(e) {
         if (e.which === 27 && Tabzilla.opened) {
             Tabzilla.toggle();
@@ -343,8 +334,8 @@ Tabzilla.open = function()
         jQuery(Tabzilla.panel).animate({ height: 200 }, 200, 'easeInOut').toggleClass("open");;
     }
     
+    Tabzilla.$link.attr("aria-expanded","true");
     Tabzilla.$panel.focus();
-    Tabzilla.$announce.html(Tabzilla.ARIA_ANNOUNCEMENTS.OPENED);
 	
     Tabzilla.opened = true;
 };
@@ -365,6 +356,8 @@ Tabzilla.close = function()
         jQuery(Tabzilla.panel).animate({ height: 0 }, 200, 'easeInOut').toggleClass("open");
         
     }
+
+    Tabzilla.$link.attr("aria-expanded","false");
 
     Tabzilla.opened = false;
 };
