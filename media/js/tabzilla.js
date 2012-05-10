@@ -332,7 +332,10 @@ Tabzilla.open = function()
         jQuery(Tabzilla.panel).animate({ height: 200 }, 200, 'easeInOut').toggleClass("open");;
     }
     
-    Tabzilla.$link.attr("aria-expanded","true");
+    Tabzilla.$link.attr({
+	    "aria-expanded": "true",
+        "title": "Click again or press the escape key to close"
+    });
     Tabzilla.$panel.focus();
 	
     Tabzilla.opened = true;
