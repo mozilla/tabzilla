@@ -351,7 +351,9 @@ Tabzilla.close = function()
         Tabzilla.$link.addClass('tabzilla-closed');
     } else {
         // jQuery animation fallback
-        jQuery(Tabzilla.panel).animate({ height: 0 }, 200, 'easeInOut').toggleClass("open");
+        jQuery(Tabzilla.panel).animate({ height: 0 }, 200, 'easeInOut', function(){
+            $(this).toggleClass("open");
+        });
         
     }
 
