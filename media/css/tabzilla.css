@@ -92,7 +92,7 @@
     direction: ltr;
 }
 #tabzilla-panel:focus{
-	outline:none;
+    outline:none;
 }
 
 #tabzilla-panel.tabzilla-opened {

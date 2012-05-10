@@ -86,6 +86,10 @@ Tabzilla.READY_POLL_INTERVAL = 40;
 Tabzilla.readyInterval = null;
 Tabzilla.jQueryCDNSrc =
     '//www.mozilla.org/media/js/libs/jquery-1.7.1.min.js';
+Tabzilla.LINK_TITLE = {
+    CLOSED: "Click to open up a section with even more interesting mozilla links",
+    OPENED: "Click again or press the escape key to close"
+}
 
 Tabzilla.hasCSSTransitions = (function() {
     var div = document.createElement('div');
@@ -258,7 +262,7 @@ Tabzilla.init = function()
         "role": "button",
         "aria-expanded": "false",
         "aria-controls": Tabzilla.$panel.attr("id"),
-        "title": "Click to open up a section with even more interesting mozilla links"
+        "title": Tabzilla.LINK_TITLE.CLOSED
     });
 
     Tabzilla.opened = false;
@@ -334,10 +338,9 @@ Tabzilla.open = function()
     
     Tabzilla.$link.attr({
 	    "aria-expanded": "true",
-        "title": "Click again or press the escape key to close"
+        "title": Tabzilla.LINK_TITLE.OPENED
     });
     Tabzilla.$panel.focus();
-	
     Tabzilla.opened = true;
 };
 
@@ -360,8 +363,10 @@ Tabzilla.close = function()
         
     }
 
-    Tabzilla.$link.attr("aria-expanded","false");
-
+    Tabzilla.$link.attr({
+	    "aria-expanded": "false",
+        "title": Tabzilla.LINK_TITLE.CLOSED
+    });
     Tabzilla.opened = false;
 };
 
