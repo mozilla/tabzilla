@@ -112,7 +112,7 @@
 }
 
 .tabzilla-opened #tabzilla-contents,
-.open #tabzilla-contents{
+.#tabzilla-panel.open #tabzilla-contents{
     display:block;
 }
 
