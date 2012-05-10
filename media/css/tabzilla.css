@@ -261,11 +261,15 @@
 
 #tabzilla-search label{
     position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
     height:1px;
-    width:1px; 
     overflow:hidden;
-    clip:rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip:rect(1px, 1px, 1px, 1px);
+}
+.html-rtl #tabzilla-search label{
+    left:auto;
+    right:-10000px;
 }
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input::-webkit-input-placeholder { color: #ddd; }
