@@ -294,8 +294,9 @@
     color: #fff;
     font-size: 12px;
     padding: 50px 15px 30px 145px;
+    line-height: 20px;
 }
 
 #tabzilla-promo .snippet#tabzilla-promo-beta a b {
-    letter-spacing: normal;
+    white-space: nowrap;
 }
