@@ -249,6 +249,26 @@ Tabzilla.init = function()
         Tabzilla.toggle();
     });
 
+    Tabzilla.addEventListener(Tabzilla.link, 'keypress', function(e) {
+        if (e.keyCode === 32) {
+            Tabzilla.toggle();
+            Tabzilla.preventDefault(e);
+        }
+    });
+
+    Tabzilla.addEventListener(Tabzilla.panel, 'keypress', function(e) {
+        if (e.keyCode === 13) {
+            Tabzilla.toggle();
+            Tabzilla.$link.focus();
+        }
+    });
+
+    Tabzilla.addEventListener(document, 'keydown', function(e) {
+        if (e.keyCode === 27 && Tabzilla.opened) {
+            Tabzilla.toggle();
+        }
+    });
+
     Tabzilla.$panel = jQuery(Tabzilla.panel);
     Tabzilla.$link  = jQuery(Tabzilla.link);
 
@@ -257,33 +277,14 @@ Tabzilla.init = function()
     Tabzilla.$panel.removeClass('tabzilla-opened');
     Tabzilla.$link.removeClass('tabzilla-opened');
 
-    Tabzilla.$panel.attr("tabindex","-1");
-    Tabzilla.$link.attr({
-        "role": "button",
-        "aria-expanded": "false",
-        "aria-controls": Tabzilla.$panel.attr("id"),
-        "title": Tabzilla.LINK_TITLE.CLOSED
-    });
+    Tabzilla.panel.setAttribute("tabIndex", "-1");
+    Tabzilla.link.setAttribute("role", "button");
+    Tabzilla.link.setAttribute("aria-expanded", "false");
+    Tabzilla.link.setAttribute("aria-controls", Tabzilla.panel.id);
+    Tabzilla.link.setAttribute("title", Tabzilla.LINK_TITLE.CLOSED);
 
     Tabzilla.opened = false;
 
-    jQuery(document).keydown(function(e) {
-        if (e.which === 27 && Tabzilla.opened) {
-            Tabzilla.toggle();
-        }
-    });
-    Tabzilla.$link.keypress(function(e) {
-        if (e.which === 32) {
-            Tabzilla.toggle();
-            Tabzilla.preventDefault(e);
-        }
-    });
-    Tabzilla.$panel.keypress(function(e) {
-        if (e.which === 13) {
-            Tabzilla.toggle();
-            Tabzilla.$link.focus();
-        }
-    });
 };
 
 Tabzilla.buildPanel = function()
@@ -337,11 +338,9 @@ Tabzilla.open = function()
         jQuery(Tabzilla.panel).animate({ height: 200 }, 200, 'easeInOut').toggleClass("open");;
     }
     
-    Tabzilla.$link.attr({
-        "aria-expanded": "true",
-        "title": Tabzilla.LINK_TITLE.OPENED
-    });
-    Tabzilla.$panel.focus();
+    Tabzilla.link.setAttribute("aria-expanded", "true");
+    Tabzilla.link.setAttribute("title", Tabzilla.LINK_TITLE.OPENED);
+    Tabzilla.panel.focus();
     Tabzilla.opened = true;
 };
 
@@ -364,10 +363,8 @@ Tabzilla.close = function()
         
     }
 
-    Tabzilla.$link.attr({
-        "aria-expanded": "false",
-        "title": Tabzilla.LINK_TITLE.CLOSED
-    });
+    Tabzilla.link.setAttribute("aria-expanded", "false");
+    Tabzilla.link.setAttribute("title", Tabzilla.LINK_TITLE.CLOSED);
     Tabzilla.opened = false;
 };
 
