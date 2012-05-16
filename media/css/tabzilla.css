@@ -37,15 +37,6 @@
     z-index: 999;
 }
 
-.darkbg #tabzilla {
-    background-image: url(//www.mozilla.org/tabzilla/media/img/tab-darkbg.png);
-}
-
-#tabzilla.tabzilla-opened,
-.darkbg #tabzilla.tabzilla-opened {
-    background-position: 0 -45px;
-}
-
 #tabzilla:after {
     background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEX%2F%2F%2F9ISEhr7AOpAAAAAXRSTlMAQObYZgAAACVJREFUCNdjYEACHAIMMhYMdjUM8j8Y%2BD8wsD9gYD7AwNiArAQAd4oFaCu14IQAAAAASUVORK5CYII%3D);
     content: " ";
