@@ -87,8 +87,8 @@ Tabzilla.readyInterval = null;
 Tabzilla.jQueryCDNSrc =
     '//www.mozilla.org/media/js/libs/jquery-1.7.1.min.js';
 Tabzilla.LINK_TITLE = {
-    CLOSED: "Click to open up a section with even more interesting mozilla links",
-    OPENED: "Click again or press the escape key to close"
+    CLOSED: "Mozilla links",
+    OPENED: "Close (Esc)"
 }
 
 Tabzilla.hasCSSTransitions = (function() {
