@@ -8,9 +8,9 @@ Adding the universal tab requires to a site requires:
 1. Add the static tab link (example below) to the top of your template  
     ```<a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>```
 2. Include the tabzilla.css CSS file either as a CSS include or built into your minified styles  
-    ```<link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet" />```
+    ```<link href="http://www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet" />```
 3. Include the tabzilla.js file in your template (preferably in the footer)  
-    ```<script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>```
+    ```<script src="http://www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>```
 
 Requirements
 ------------
