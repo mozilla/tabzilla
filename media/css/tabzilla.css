@@ -82,6 +82,9 @@
     overflow: hidden;
     direction: ltr;
 }
+#tabzilla-panel:focus{
+    outline:none;
+}
 
 #tabzilla-panel.tabzilla-opened {
     height: 200px;
@@ -96,6 +99,12 @@
     left: 50%;
     margin-left: -486px;
     right: 0;
+    display:none;
+}
+
+.tabzilla-opened #tabzilla-contents,
+#tabzilla-panel.open #tabzilla-contents{
+    display:block;
 }
 
 * html #tabzilla-contents             { zoom: 1; } /* IE6 */
@@ -239,6 +248,19 @@
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input:focus {
     outline: 0;
     border-color: #999;
+}
+
+#tabzilla-search label{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+.html-rtl #tabzilla-search label{
+    left:auto;
+    right:-10000px;
 }
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input::-webkit-input-placeholder { color: #ddd; }
