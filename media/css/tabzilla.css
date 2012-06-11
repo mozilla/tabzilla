@@ -7,7 +7,7 @@
          url('//www.mozilla.org/img/fonts/OpenSans-Regular-webfont.woff') format('woff'),
          url('//www.mozilla.org/img/fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
          url('//www.mozilla.org/img/fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
-    font-weight: 400;
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -18,7 +18,7 @@
          url('//www.mozilla.org/img/fonts/OpenSans-Semibold-webfont.woff') format('woff'),
          url('//www.mozilla.org/img/fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
          url('//www.mozilla.org/img/fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
-    font-weight: 600;
+    font-weight: bold;
     font-style: normal;
 }
 
@@ -91,13 +91,15 @@
 }
 
 #tabzilla-contents {
-    width: 992px;
+    width: 960px;
     margin: 0 auto;
+    padding: 0 10px;
     text-align: left;
     position: absolute;
     bottom: 0;
     left: 50%;
-    margin-left: -486px;
+    top: 0;
+    margin-left: -490px;
     right: 0;
     display:none;
 }
@@ -124,7 +126,7 @@
     display: inline;
     width: 300px;
     height: 210px;
-    margin-right: 5px;
+    margin: 0 10px;
     background: #f8f8f8;
     position: relative;
     font-size: 13px;
@@ -153,15 +155,20 @@
     text-transform: uppercase;
 }
 
+#tabzilla-panel #tabzilla-nav {
+    float: left;
+    margin: 0 10px;
+}
+
 #tabzilla-promo .snippet h4 {
     line-height: 1.1;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: bold;
     margin-bottom: 0.4em;
 }
 
 #tabzilla-panel #tabzilla-nav h2 {
-    font-weight: 600;
+    font-weight: bold;
     font-size: 13px;
     margin: 0 20px 0.4em 20px;
     white-space: nowrap;
@@ -178,7 +185,7 @@
     list-style-type: none;
     margin: 40px 0 0 0;
     padding: 0;
-    width: 135px;
+    width: 123px;
     height: 95px;
     border-right: 1px dotted #d6d6d6;
     background: none;
@@ -212,7 +219,7 @@
 }
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search {
-    border-right: 0;
+    border-color: #fff;
 }
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search a {
@@ -312,4 +319,23 @@
 
 #tabzilla-promo .snippet#tabzilla-promo-beta a b {
     white-space: nowrap;
+}
+
+@media only screen and (min-width: 720px) and (max-width: 979px) {
+
+
+#tabzilla-contents {
+    width: 720px;
+    left: 0;
+    margin-left: 0;
+}
+
+#tabzilla-promo {
+    display: none;
+}
+
+#tabzilla-panel #tabzilla-nav ul li {
+    width: 139px;
+}
+
 }
