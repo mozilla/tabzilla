@@ -21,6 +21,7 @@
             "bn":       "বাংলা",
             "de":       "Deutsch",
             "es":       "Español",
+            "fr":       "Français",
             "fy":       "Frysk",
             "he":       "עברית",
             "nl":       "Nederlands",
@@ -142,6 +143,34 @@
 
             // Locale for Firefox Flicks Promotions
             firefoxFlicks:      "¡Grandes premios! ¡Un jurado de estrellas de Hollywood! ¡Participa en Firefox Flicks, el concurso mundial de vídeos para contar nuestra historia, o vota a tus favoritos!"
+        },
+
+        "fr" : { // Locale strings for French
+
+            // Title Strings
+            titleMozilla: "Mozilla",
+            titleProducts: "Produits",
+            titleInnovation: "Innovations",
+            titleGetInvolved: "Contribuer",
+
+            // Link Strings
+            linkMission: "Mission",
+            linkAbout: "À propos",
+            linkProjects: "Projets",
+            linkSupport: "Support",
+            linkMDN: "Developer Network",
+            linkFirefox: "Firefox",
+            linkThunderbird: "Thunderbird",
+            linkWebFWD: "WebFWD",
+            linkLabs: "Labs",
+            linkVolunteers: "Contribuer",
+            linkCareers: "Carrière",
+            linkFindUs: "Nous trouver",
+            linkJoinUs: "Nous contacter",
+            linkWebDir: "Plan du site",
+
+            // Locale for Firefox Beta Promotions
+            firefoxBeta: "Téléchargez Firefox Beta, faites nous part de vos remarques et aidez nous à améliorer la prochaine version de Firefox"
         },
 
         "fy" : { // Locale strings for Frisian
