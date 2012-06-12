@@ -157,6 +157,7 @@
 
 #tabzilla-panel #tabzilla-nav {
     float: left;
+    width: 620px;
     margin: 0 10px;
 }
 
@@ -170,7 +171,7 @@
 #tabzilla-panel #tabzilla-nav h2 {
     font-weight: bold;
     font-size: 13px;
-    margin: 0 20px 0.4em 20px;
+    margin: 0 20px 0.4em 0;
     white-space: nowrap;
 }
 
@@ -183,26 +184,29 @@
     float: left;
     display: inline;
     list-style-type: none;
-    margin: 40px 0 0 0;
+    margin: 40px 3% 0 0;
     padding: 0;
-    width: 123px;
-    height: 95px;
-    border-right: 1px dotted #d6d6d6;
-    background: none;
+    width: 17%;
+    background-color: transparent;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABfCAMAAAAeT108AAAABlBMVEX////W1tZkFI+EAAAAAXRSTlMAQObYZgAAABdJREFUeNrVwwENAAAAwiDev7Q5ZEP8HhKOADGMXVvVAAAAAElFTkSuQmCC);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
     line-height: 1.1;
+}
+
+#tabzilla-panel #tabzilla-nav ul li:first-child {
 }
 
 #tabzilla-panel #tabzilla-nav ul li ul li {
     float: none;
     margin: 0;
-    border-right: 0;
     height: auto;
 }
 
 #tabzilla-panel #tabzilla-nav a {
     color: #484848;
     display: block;
-    padding: 0.4em 20px;
+    padding: 0.4em 20px 0.4em 0;
     outline: 0;
 }
 
@@ -219,7 +223,7 @@
 }
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search {
-    border-color: #fff;
+    background-image: none;
 }
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search a {
@@ -227,7 +231,7 @@
 }
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search form  {
-    margin: 0.4em 20px
+    margin: 0.4em 20px 0.4em 0;
 }
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search input {
@@ -323,9 +327,25 @@
 
 @media only screen and (min-width: 720px) and (max-width: 979px) {
 
-
 #tabzilla-contents {
     width: 720px;
+    margin-left: -415px;
+}
+
+#tabzilla-promo {
+    display: none;
+}
+
+#tabzilla-panel #tabzilla-nav {
+    width: 700px;
+}
+
+}
+
+@media only screen and (max-width: 719px) {
+
+#tabzilla-contents {
+    width: 320px;
     left: 0;
     margin-left: 0;
 }
@@ -335,7 +355,12 @@
 }
 
 #tabzilla-panel #tabzilla-nav ul li {
-    width: 139px;
+    height: 0;
+    display: block;
+    float: none;
+}
+
+#tabzilla-panel #tabzilla-nav ul li ul {
 }
 
 }
