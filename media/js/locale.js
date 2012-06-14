@@ -27,6 +27,7 @@
             "nl":       "Nederlands",
             "pl":       "Polski",
             "pt":       "Português",
+            "ro":       "Română",
             "sl":       "Slovenski Jezik",
             "sr":       "српски језик",
             "ta":       "தமிழ்",
@@ -309,6 +310,34 @@
 
             // Locale for Firefox Flicks Promotions
             firefoxFlicks:      "Ótimos prêmios! Juízes de Hollywood! Pontos de exclamação! Participe do Firefox Flicks, o concurso global de vídeo para contar a sua história, ou vote nos seus favoritos!"
+        },
+
+        "ro" : { // Locale strings for Romanian
+
+            // Title Strings
+            titleMozilla:       "Mozilla",
+            titleProducts:      "Produse",
+            titleInnovation:    "Inovații",
+            titleGetInvolved:   "Participă",
+
+            // Link Strings
+           linkMission:        "Misiune",
+            linkAbout:          "Despre",
+            linkProjects:       "Proiecte",
+            linkSupport:        "Asistență",
+            linkMDN:            "Rețeaua de dezvoltatori",
+            linkFirefox:        "Firefox",
+            linkThunderbird:    "Thunderbird",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "Laboratoare",
+            linkVolunteer:      "Voluntariat",
+            linkCareers:        "Cariere",
+            linkFindUs:         "Caută-ne",
+            linkJoinUs:         "Sprijină-ne",
+            linkWebDir:         "Lista saiturilor",
+
+            // Locale for Firefox Flicks Promotions
+            firefoxFlicks:      "Premii deosebite! Juriu de la Hollywood! Semne de exclamație! Participă la Firefox Flicks, spunând povestea noastră în acest concurs internațional sau votându-ți favoriții!"
         },
 
         "sl" : { // Locale strings for Slovenian
