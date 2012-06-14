@@ -87,6 +87,10 @@ Tabzilla.READY_POLL_INTERVAL = 40;
 Tabzilla.readyInterval = null;
 Tabzilla.jQueryCDNSrc =
     '//www.mozilla.org/media/js/libs/jquery-1.7.1.min.js';
+Tabzilla.LINK_TITLE = {
+    CLOSED: "Mozilla links",
+    OPENED: "Close (Esc)"
+}
 
 Tabzilla.hasCSSTransitions = (function() {
     var div = document.createElement('div');
@@ -254,7 +258,33 @@ Tabzilla.init = function()
     Tabzilla.$panel.removeClass('tabzilla-opened');
     Tabzilla.$link.removeClass('tabzilla-opened');
 
+    Tabzilla.$panel.attr("tabindex","-1");
+    Tabzilla.$link.attr({
+        "role": "button",
+        "aria-expanded": "false",
+        "aria-controls": Tabzilla.$panel.attr("id"),
+        "title": Tabzilla.LINK_TITLE.CLOSED
+    });
+
     Tabzilla.opened = false;
+
+    jQuery(document).keydown(function(e) {
+        if (e.which === 27 && Tabzilla.opened) {
+            Tabzilla.toggle();
+        }
+    });
+    Tabzilla.$link.keypress(function(e) {
+        if (e.which === 32) {
+            Tabzilla.toggle();
+            Tabzilla.preventDefault(e);
+        }
+    });
+    Tabzilla.$panel.keypress(function(e) {
+        if (e.which === 13) {
+            Tabzilla.toggle();
+            Tabzilla.$link.focus();
+        }
+    });
 };
 
 Tabzilla.buildPanel = function()
@@ -305,9 +335,14 @@ Tabzilla.open = function()
         Tabzilla.$link.removeClass('tabzilla-closed');
     } else {
         // jQuery animation fallback
-        jQuery(Tabzilla.panel).animate({ height: 200 }, 200, 'easeInOut');
+        jQuery(Tabzilla.panel).animate({ height: 200 }, 200, 'easeInOut').toggleClass("open");;
     }
-
+    
+    Tabzilla.$link.attr({
+        "aria-expanded": "true",
+        "title": Tabzilla.LINK_TITLE.OPENED
+    });
+    Tabzilla.$panel.focus();
     Tabzilla.opened = true;
 };
 
@@ -324,9 +359,16 @@ Tabzilla.close = function()
         Tabzilla.$link.addClass('tabzilla-closed');
     } else {
         // jQuery animation fallback
-        jQuery(Tabzilla.panel).animate({ height: 0 }, 200, 'easeInOut');
+        jQuery(Tabzilla.panel).animate({ height: 0 }, 200, 'easeInOut', function(){
+            $(this).toggleClass("open");
+        });
+        
     }
 
+    Tabzilla.$link.attr({
+        "aria-expanded": "false",
+        "title": Tabzilla.LINK_TITLE.CLOSED
+    });
     Tabzilla.opened = false;
 };
 
@@ -385,6 +427,7 @@ Tabzilla.content =
     + '        <form title="Search Mozilla sites" role="search" action="http://www.google.com/cse">'
     + '          <input type="hidden" value="002443141534113389537:ysdmevkkknw" name="cx">'
     + '          <input type="hidden" value="FORID:0" name="cof">'
+    + '          <label for="q">Search</label>'
     + '          <input type="search" placeholder="Search" id="q" name="q">'
     + '        </form>'
     + '      </li>'
