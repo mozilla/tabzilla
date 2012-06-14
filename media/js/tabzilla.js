@@ -92,25 +92,22 @@ Tabzilla.LINK_TITLE = {
     OPENED: 'Close (Esc)'
 }
 
-Tabzilla.hasCSSTransitions = (function() {
-    var div = document.createElement('div');
-    div.innerHTML = '<div style="'
-        + '-webkit-transition: color 1s linear;'
-        + '-moz-transition: color 1s linear;'
-        + '-ms-transition: color 1s linear;'
-        + '-o-transition: color 1s linear;'
-        + '"></div>';
+/**
+ * Whether or not Tabzilla is in small mode
+ *
+ * @var Boolean
+ */
+Tabzilla.smallMode = false;
 
-    var hasTransitions = (
-           (div.firstChild.style.webkitTransition !== undefined)
-        || (div.firstChild.style.MozTransition !== undefined)
-        || (div.firstChild.style.msTransition !== undefined)
-        || (div.firstChild.style.OTransition !== undefined)
-    );
-
-    delete div;
-
-    return hasTransitions;
+/**
+ * Whether or not min/max width media queries are supported in CSS
+ *
+ * If not supported, the small mode is never triggered.
+ *
+ * @var Boolean
+ */
+Tabzilla.hasMediaQueryWidths = (function(){
+    return !(/MSIE\ (4|5|6|7|8)/.test(navigator.userAgent));
 })();
 
 /**
@@ -225,17 +222,15 @@ Tabzilla.ready = function()
 
 Tabzilla.init = function()
 {
-    if (!Tabzilla.hasCSSTransitions) {
-        // add easing functions
-        jQuery.extend(jQuery.easing, {
-            'easeInOut':  function (x, t, b, c, d) {
-                if (( t /= d / 2) < 1) {
-                    return c / 2 * t * t + b;
-                }
-                return -c / 2 * ((--t) * (t - 2) - 1) + b;
+    // add easing functions
+    jQuery.extend(jQuery.easing, {
+        'easeInOut':  function (x, t, b, c, d) {
+            if (( t /= d / 2) < 1) {
+                return c / 2 * t * t + b;
             }
-        });
-    }
+            return -c / 2 * ((--t) * (t - 2) - 1) + b;
+        }
+    });
 
     Tabzilla.link  = document.getElementById('tabzilla');
     Tabzilla.panel = Tabzilla.buildPanel();
@@ -287,6 +282,11 @@ Tabzilla.init = function()
             Tabzilla.$link.focus();
         }
     });
+
+    if (Tabzilla.hasMediaQueryWidths) {
+        jQuery(window).resize(Tabzilla.handleResize);
+        Tabzilla.handleResize();
+    }
 };
 
 Tabzilla.buildPanel = function()
@@ -330,22 +330,23 @@ Tabzilla.open = function()
         return;
     }
 
-    if (Tabzilla.hasCSSTransitions) {
-        Tabzilla.$panel.addClass('tabzilla-opened');
-        Tabzilla.$link.addClass('tabzilla-opened');
-        Tabzilla.$panel.removeClass('tabzilla-closed');
-        Tabzilla.$link.removeClass('tabzilla-closed');
-    } else {
-        // jQuery animation fallback
-        jQuery(Tabzilla.panel)
-            .animate({ height: 200 }, 200, 'easeInOut')
-            .toggleClass('open');
-    }
+    Tabzilla.$panel.toggleClass('open');
 
-    Tabzilla.$link.attr({
-        'aria-expanded' : 'true',
-        'title'         : Tabzilla.LINK_TITLE.OPENED
-    });
+    var $content = Tabzilla.$panel.children('#tabzilla-contents');
+    var height = $content.height();
+
+    Tabzilla.$panel
+        .animate({ 'height' : height }, 200, 'easeInOut', function() {
+            Tabzilla.$panel.css({ 'height' : 'auto' });
+        });
+
+    Tabzilla.$link
+        .attr({
+            'aria-expanded' : 'true',
+            'title'         : Tabzilla.LINK_TITLE.OPENED
+        })
+        .addClass('tabzilla-opened')
+        .removeClass('tabzilla-closed');
 
     Tabzilla.$panel.focus();
     Tabzilla.opened = true;
@@ -357,24 +358,20 @@ Tabzilla.close = function()
         return;
     }
 
-    if (Tabzilla.hasCSSTransitions) {
-        Tabzilla.$panel.removeClass('tabzilla-opened');
-        Tabzilla.$link.removeClass('tabzilla-opened');
-        Tabzilla.$panel.addClass('tabzilla-closed');
-        Tabzilla.$link.addClass('tabzilla-closed');
-    } else {
-        // jQuery animation fallback
-        jQuery(Tabzilla.panel)
-            .animate({ height: 0 }, 200, 'easeInOut', function() {
-                jQuery(this).toggleClass('open');
-            });
+    // jQuery animation fallback
+    Tabzilla.$panel
+        .animate({ height: 0 }, 200, 'easeInOut', function() {
+            Tabzilla.$panel.toggleClass('open');
+        });
 
-    }
+    Tabzilla.$link
+        .attr({
+            'aria-expanded' : 'false',
+            'title'         : Tabzilla.LINK_TITLE.CLOSED
+        })
+        .addClass('tabzilla-closed')
+        .removeClass('tabzilla-opened');
 
-    Tabzilla.$link.attr({
-        'aria-expanded' : 'false',
-        'title'         : Tabzilla.LINK_TITLE.CLOSED
-    });
 
     Tabzilla.opened = false;
 };
@@ -386,6 +383,136 @@ Tabzilla.preventDefault = function(ev)
     } else {
         ev.returnValue = false;
     }
+};
+
+Tabzilla.handleResize = function(e)
+{
+    var width = $(window).width();
+    if (width <= 719 && !Tabzilla.smallMode) {
+        Tabzilla.enterSmallMode();
+    }
+
+    if (width > 719 && Tabzilla.smallMode) {
+        Tabzilla.leaveSmallMode();
+    }
+};
+
+Tabzilla.toggleSmallMode = function()
+{
+    if (Tabzilla.smallMode) {
+        Tabzilla.leaveSmallMode();
+    } else {
+        Tabzilla.enterSmallMode();
+    }
+};
+
+Tabzilla.enterSmallMode = function()
+{
+    // add focusability to menu headers
+    jQuery('#tabzilla-nav h2')
+        .attr({
+            'role'          : 'menuitem',
+            'tabindex'      : '0',
+            'aria-expanded' : 'false',
+            'aria-haspopup' : 'true'
+        })
+        .each(function(i, e) {
+            var $menu = jQuery(e).siblings('ul');
+            var $item = jQuery(e);
+            Tabzilla.initSubmenu($item, $menu);
+            Tabzilla.closeSubmenu($item, $menu);
+        });
+
+    Tabzilla.smallMode = true;
+};
+
+Tabzilla.leaveSmallMode = function()
+{
+    // remove focusability from menu headers
+    jQuery('#tabzilla-nav h2')
+        .removeAttr(
+            'role tabindex aria-haspopup aria-expanded'
+        )
+        .each(function(i, e) {
+            var $menu = jQuery(e).siblings('ul');
+            var $item = jQuery(e);
+            Tabzilla.denitSubmenu($item, $menu);
+
+        });
+
+    Tabzilla.smallMode = false;
+};
+
+Tabzilla.initSubmenu = function($item, $menu)
+{
+    $item.click(function(e) {
+        Tabzilla.toggleSubmenu($item, $menu);
+    });
+    // TODO: conflicts with $panel keypress
+/*    $item.keypress(function(e) {
+        if (e.which === 13 || e.which === 39) {
+            Tabzilla.preventDefault(e);
+            Tabzilla.toggleSubmenu($item, $menu);
+        }
+    });*/
+    $menu.attr({ 'role' : 'menu' });
+
+    var $items = $menu.find('a');
+    $items.attr({ 'role' : 'menuitem' });
+};
+
+Tabzilla.denitSubmenu = function($item, $menu)
+{
+    $item.unbind('click');
+    $menu.removeAttr('role');
+    $menu.css({ 'height' : 'auto' } );
+
+    var $items = $menu.find('a');
+    $items.removeAttr('role');
+};
+
+Tabzilla.toggleSubmenu = function($item, $menu)
+{
+    if ($item.attr('aria-expanded') === 'true') {
+        Tabzilla.closeSubmenu($item, $menu);
+    } else {
+        Tabzilla.openSubmenu($item, $menu);
+    }
+};
+
+Tabzilla.openSubmenu = function($item, $menu)
+{
+    $item.attr({ 'aria-expanded' : 'true' });
+
+    var $items = $menu.find('a');
+    $items.attr({ 'tabindex' : '0' });
+
+
+    // get natural menu height
+    var height = 0;
+    $menu.find('li').each(function(i, e) {
+        height += jQuery(e).height() + 1;
+    });
+    height--;
+
+    $menu
+        .css({ 'height' : height + 'px' })
+        .attr({ 'aria-hidden' : 'false' });
+};
+
+Tabzilla.closeSubmenu = function($item, $menu)
+{
+    $item.attr({ 'aria-expanded' : 'false' });
+
+    $menu
+        .css({
+            'overflow' : 'hidden',
+            'height'   : '0'
+        })
+        .attr({ 'aria-hidden' : 'true' });
+
+    var $items = $menu.find('a');
+    $items.attr({ 'tabindex' : '-1' });
 };
 
 Tabzilla.content =
