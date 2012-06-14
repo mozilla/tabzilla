@@ -86,9 +86,10 @@ Tabzilla.READY_POLL_INTERVAL = 40;
 Tabzilla.readyInterval = null;
 Tabzilla.jQueryCDNSrc =
     '//www.mozilla.org/media/js/libs/jquery-1.7.1.min.js';
+
 Tabzilla.LINK_TITLE = {
-    CLOSED: "Mozilla links",
-    OPENED: "Close (Esc)"
+    CLOSED: 'Mozilla links',
+    OPENED: 'Close (Esc)'
 }
 
 Tabzilla.hasCSSTransitions = (function() {
@@ -257,12 +258,14 @@ Tabzilla.init = function()
     Tabzilla.$panel.removeClass('tabzilla-opened');
     Tabzilla.$link.removeClass('tabzilla-opened');
 
-    Tabzilla.$panel.attr("tabindex","-1");
+    // make panel unfocusable
+    Tabzilla.$panel.attr('tabindex', '-1');
+
     Tabzilla.$link.attr({
-        "role": "button",
-        "aria-expanded": "false",
-        "aria-controls": Tabzilla.$panel.attr("id"),
-        "title": Tabzilla.LINK_TITLE.CLOSED
+        'role'          : 'button',
+        'aria-expanded' : 'false',
+        'aria-controls' : Tabzilla.$panel.attr('id'),
+        'title'         : Tabzilla.LINK_TITLE.CLOSED
     });
 
     Tabzilla.opened = false;
@@ -334,13 +337,16 @@ Tabzilla.open = function()
         Tabzilla.$link.removeClass('tabzilla-closed');
     } else {
         // jQuery animation fallback
-        jQuery(Tabzilla.panel).animate({ height: 200 }, 200, 'easeInOut').toggleClass("open");;
+        jQuery(Tabzilla.panel)
+            .animate({ height: 200 }, 200, 'easeInOut')
+            .toggleClass('open');
     }
-    
+
     Tabzilla.$link.attr({
-        "aria-expanded": "true",
-        "title": Tabzilla.LINK_TITLE.OPENED
+        'aria-expanded' : 'true',
+        'title'         : Tabzilla.LINK_TITLE.OPENED
     });
+
     Tabzilla.$panel.focus();
     Tabzilla.opened = true;
 };
@@ -358,16 +364,18 @@ Tabzilla.close = function()
         Tabzilla.$link.addClass('tabzilla-closed');
     } else {
         // jQuery animation fallback
-        jQuery(Tabzilla.panel).animate({ height: 0 }, 200, 'easeInOut', function(){
-            $(this).toggleClass("open");
-        });
-        
+        jQuery(Tabzilla.panel)
+            .animate({ height: 0 }, 200, 'easeInOut', function() {
+                jQuery(this).toggleClass('open');
+            });
+
     }
 
     Tabzilla.$link.attr({
-        "aria-expanded": "false",
-        "title": Tabzilla.LINK_TITLE.CLOSED
+        'aria-expanded' : 'false',
+        'title'         : Tabzilla.LINK_TITLE.CLOSED
     });
+
     Tabzilla.opened = false;
 };
 
