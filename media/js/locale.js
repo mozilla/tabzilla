@@ -14,7 +14,7 @@
 
     Tabzilla.l10n = { // The entire localization string tree
 
-        "now"   : "en-US", // The current-locale, default to en-US
+        "now"   : "en", // The current-locale, default to en
 
         "all"   : { // List of all available locale
             "en":       "English",
@@ -430,7 +430,7 @@
     Tabzilla.l10n.selector.setAttribute("title", "Choose your language for Tabzilla");
 
     // Insert the <option> elements into the locale-selector
-    Tabzilla.l10n.selector.innerHTML = '<option value="en-US">Show Tabzilla in...</option>';
+    Tabzilla.l10n.selector.innerHTML = '<option value="en">Show Tabzilla in...</option>';
     for (var i in Tabzilla.l10n.all) {
           Tabzilla.l10n.selector.innerHTML += '<option value="' + i + '">'+ Tabzilla.l10n.all[i] +'</option>';
     }
