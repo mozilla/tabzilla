@@ -277,7 +277,7 @@ Tabzilla.init = function()
         }
     });
     Tabzilla.$panel.keypress(function(e) {
-        if (e.which === 13) {
+        if (e.which === 13 && !Tabzilla.smallMode) {
             Tabzilla.toggle();
             Tabzilla.$link.focus();
         }
@@ -337,7 +337,7 @@ Tabzilla.open = function()
 
     Tabzilla.$panel
         .animate({ 'height' : height }, 200, 'easeInOut', function() {
-            Tabzilla.$panel.css({ 'height' : 'auto' });
+            Tabzilla.$panel.css('height', 'auto');
         });
 
     Tabzilla.$link
@@ -448,27 +448,28 @@ Tabzilla.initSubmenu = function($item, $menu)
     $item.click(function(e) {
         Tabzilla.toggleSubmenu($item, $menu);
     });
-    // TODO: conflicts with $panel keypress
-/*    $item.keypress(function(e) {
+    $item.keypress(function(e) {
         if (e.which === 13 || e.which === 39) {
             Tabzilla.preventDefault(e);
             Tabzilla.toggleSubmenu($item, $menu);
         }
-    });*/
-    $menu.attr({ 'role' : 'menu' });
+    });
+    $menu.attr('role', 'menu');
 
     var $items = $menu.find('a');
-    $items.attr({ 'role' : 'menuitem' });
+    $items.attr('role', 'menuitem');
 };
 
 Tabzilla.denitSubmenu = function($item, $menu)
 {
     $item.unbind('click');
     $menu.removeAttr('role');
-    $menu.css({ 'height' : 'auto' } );
+    $menu.css('height', 'auto');
 
     var $items = $menu.find('a');
-    $items.removeAttr('role');
+    $items
+        .removeAttr('role tabindex')
+        .unbind('keypress');
 };
 
 Tabzilla.toggleSubmenu = function($item, $menu)
@@ -482,11 +483,10 @@ Tabzilla.toggleSubmenu = function($item, $menu)
 
 Tabzilla.openSubmenu = function($item, $menu)
 {
-    $item.attr({ 'aria-expanded' : 'true' });
+    $item.attr('aria-expanded', 'true');
 
     var $items = $menu.find('a');
-    $items.attr({ 'tabindex' : '0' });
-
+    $items.attr('tabindex', '0');
 
     // get natural menu height
     var height = 0;
@@ -496,23 +496,23 @@ Tabzilla.openSubmenu = function($item, $menu)
     height--;
 
     $menu
-        .css({ 'height' : height + 'px' })
-        .attr({ 'aria-hidden' : 'false' });
+        .css('height', height + 'px')
+        .attr('aria-hidden', 'false');
 };
 
 Tabzilla.closeSubmenu = function($item, $menu)
 {
-    $item.attr({ 'aria-expanded' : 'false' });
+    $item.attr('aria-expanded', 'false');
 
     $menu
         .css({
             'overflow' : 'hidden',
             'height'   : '0'
         })
-        .attr({ 'aria-hidden' : 'true' });
+        .attr('aria-hidden', 'true');
 
     var $items = $menu.find('a');
-    $items.attr({ 'tabindex' : '-1' });
+    $items.attr('tabindex', '-1');
 };
 
 Tabzilla.content =
