@@ -430,9 +430,10 @@ Tabzilla.leaveSmallMode = function()
 {
     // remove focusability from menu headers
     jQuery('#tabzilla-nav h2')
-        .removeAttr(
-            'role tabindex aria-haspopup aria-expanded'
-        )
+        .removeAttr('role')
+        .removeAttr('tabindex')
+        .removeAttr('aria-haspopup')
+        .removeAttr('aria-expanded')
         .each(function(i, e) {
             var $menu = jQuery(e).siblings('ul');
             var $item = jQuery(e);
@@ -448,10 +449,18 @@ Tabzilla.initSubmenu = function($item, $menu)
     $item.click(function(e) {
         Tabzilla.toggleSubmenu($item, $menu);
     });
-    $item.keypress(function(e) {
-        if (e.which === 13 || e.which === 39) {
+    $item.keyup(function(e) {
+        if (e.keyCode === 13) {
             Tabzilla.preventDefault(e);
             Tabzilla.toggleSubmenu($item, $menu);
+        }
+        if (e.keyCode === 39) {
+            Tabzilla.preventDefault(e);
+            Tabzilla.openSubmenu($item, $menu);
+        }
+        if (e.keyCode === 37) {
+            Tabzilla.preventDefault(e);
+            Tabzilla.closeSubmenu($item, $menu);
         }
     });
     $menu.attr('role', 'menu');
@@ -468,7 +477,8 @@ Tabzilla.denitSubmenu = function($item, $menu)
 
     var $items = $menu.find('a');
     $items
-        .removeAttr('role tabindex')
+        .removeAttr('role')
+        .removeAttr('tabindex')
         .unbind('keypress');
 };
 
