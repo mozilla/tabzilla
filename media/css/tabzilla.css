@@ -29,7 +29,7 @@
     float: right;
     display: block;
     background: url(//www.mozilla.org/tabzilla/media/img/tab.png);
-    height: 45px;
+    height: 44px;
     width: 150px;
     position: relative;
     text-indent: -2000px;
@@ -76,15 +76,12 @@
     position: relative;
     overflow: hidden;
     direction: ltr;
+    zoom: 1;
 }
 
 #tabzilla-panel:focus {
     outline:none;
 }
-
-/*#tabzilla-panel.tabzilla-opened {
-    height: 200px;
-}*/
 
 #tabzilla-contents {
     width: 960px;
@@ -92,9 +89,6 @@
     padding: 0 10px;
     text-align: left;
     position: relative;
-    left: 50%;
-    margin-left: -490px;
-    right: 0;
     display:none;
 }
 
@@ -150,6 +144,7 @@
 
 #tabzilla-panel #tabzilla-nav {
     float: left;
+    display: inline;
     width: 620px;
     margin: 0 10px;
 }
@@ -177,9 +172,9 @@
     float: left;
     display: inline;
     list-style-type: none;
+    width: 17%;
     margin: 40px 3% 0 0;
     padding: 0;
-    width: 17%;
     background-color: transparent;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABfCAMAAAAeT108AAAABlBMVEX////W1tZkFI+EAAAAAXRSTlMAQObYZgAAABdJREFUeNrVwwENAAAAwiDev7Q5ZEP8HhKOADGMXVvVAAAAAElFTkSuQmCC);
     background-position: 100% 0;
@@ -187,7 +182,8 @@
     line-height: 1.1;
 }
 
-#tabzilla-panel #tabzilla-nav ul li:first-child {
+* html #tabzilla-panel #tabzilla-nav ul li {
+    margin-right: 10px; /* IE6 width oddity workaround */
 }
 
 #tabzilla-panel #tabzilla-nav ul li ul li {
@@ -384,9 +380,9 @@
         width: 15px;
         top: 10px;
         right: 20px;
-        -moz-transform: rotate(-90deg);
-        -webkit-transform: rotate(-90deg);
-        transform: rotate(-90deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
         -webkit-transition: all 0.2s ease-in-out;
         -moz-transition: all 0.2s ease-in-out;
         -o-transition: all 0.2s ease-in-out;
@@ -396,9 +392,9 @@
     }
 
     #tabzilla-panel #tabzilla-nav h2[aria-expanded=true]:after {
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
     }
 
     #tabzilla-panel #tabzilla-nav h2:hover,
