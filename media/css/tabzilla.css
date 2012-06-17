@@ -140,6 +140,7 @@
     font-style: normal;
     font-weight: normal;
     text-transform: uppercase;
+    border: 0;
 }
 
 #tabzilla-panel #tabzilla-nav {
@@ -199,15 +200,15 @@
     outline: 0;
 }
 
-#tabzilla-panel #tabzilla-nav a,
-#tabzilla-panel #tabzilla-nav a:link,
-#tabzilla-panel #tabzilla-nav a:visited {
+#tabzilla-panel a,
+#tabzilla-panel a:link,
+#tabzilla-panel a:visited {
     text-decoration: none;
 }
 
-#tabzilla-panel #tabzilla-nav a:hover,
-#tabzilla-panel #tabzilla-nav a:active,
-#tabzilla-panel #tabzilla-nav a:focus {
+#tabzilla-panel a:hover,
+#tabzilla-panel a:active,
+#tabzilla-panel a:focus {
     text-decoration: underline;
 }
 
