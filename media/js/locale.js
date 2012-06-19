@@ -79,7 +79,7 @@
             "zh":       "中文"
         },
 
-        "en" : { // Locale strings for US English
+        "en"    : { // Locale strings for US English
 
             // Title Strings
             titleMozilla:       "Mozilla",
@@ -163,7 +163,7 @@
             firefoxFlicks:      "Tolle Preise! Hollywood judges! Viele Ausrufezeichen! Machen Sie bei Firefox Flicks mit, einem globalen Videowettbewerb um unsere Geschichte zu erzählen, oder stimmen Sie für Ihre Favoriten ab!"
         },
 
-        "es" : { // Locale strings for Spanish
+        "es"    : { // Locale strings for Spanish
 
             // Title Strings
             titleMozilla:       "Mozilla",
@@ -191,35 +191,36 @@
             firefoxFlicks:      "¡Grandes premios! ¡Un jurado de estrellas de Hollywood! ¡Participa en Firefox Flicks, el concurso mundial de vídeos para contar nuestra historia, o vota a tus favoritos!"
         },
 
-        "fr" : { // Locale strings for French
+        "fr"    : { // Locale strings for French
 
             // Title Strings
-            titleMozilla: "Mozilla",
-            titleProducts: "Produits",
-            titleInnovation: "Innovations",
-            titleGetInvolved: "Contribuer",
+            titleMozilla:       "Mozilla",
+            titleProducts:      "Produits",
+            titleInnovation:    "Innovations",
+            titleGetInvolved:   "Contribuer",
 
             // Link Strings
-            linkMission: "Mission",
-            linkAbout: "À propos",
-            linkProjects: "Projets",
-            linkSupport: "Support",
-            linkMDN: "Developer Network",
-            linkFirefox: "Firefox",
-            linkThunderbird: "Thunderbird",
-            linkWebFWD: "WebFWD",
-            linkLabs: "Labs",
-            linkVolunteer: "Contribuer",
-            linkCareers: "Carrière",
-            linkFindUs: "Nous trouver",
-            linkJoinUs: "Nous contacter",
-            linkWebDir: "Plan du site",
+            linkMission:        "Mission",
+            linkAbout:          "À propos",
+            linkProjects:       "Projets",
+            linkSupport:        "Support",
+            linkMDN:            "Developer Network",
+            linkFirefox:        "Firefox",
+            linkThunderbird:    "Thunderbird",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "Labs",
+            linkVolunteer:      "Contribuer",
+            linkCareers:        "Carrière",
+            linkFindUs:         "Nous trouver",
+            linkJoinUs:         "Nous contacter",
+            linkWebDir:         "Plan du site",
 
             // Locale for Firefox Beta Promotions
-            firefoxBeta: "Téléchargez Firefox Bêta, faites-nous part de vos remarques et aidez-nous à améliorer la prochaine version de Firefox"
+            firefoxBeta:        "Téléchargez Firefox Bêta, faites-nous part de vos remarques et aidez-nous à améliorer la prochaine version de Firefox"
         },
 
-        "fy" : { // Locale strings for Frisian
+        "fy"    : { // Locale strings for Frisian
+
             // Title Strings
             titleMozilla:       "Mozilla",
             titleProducts:      "Produkten",
@@ -360,6 +361,7 @@
         },
 
         "nl"    : { // Locale strings for Hebrew
+
             // Title Strings
             titleMozilla:       "Mozilla",
             titleProducts:      "Producten",
@@ -442,7 +444,7 @@
             firefoxFlicks:      "Ótimos prêmios! Juízes de Hollywood! Pontos de exclamação! Participe do Firefox Flicks, o concurso global de vídeo para contar a sua história, ou vote nos seus favoritos!"
         },
 
-        "ro" : { // Locale strings for Romanian
+        "ro"    : { // Locale strings for Romanian
 
             // Title Strings
             titleMozilla:       "Mozilla",
@@ -451,7 +453,7 @@
             titleGetInvolved:   "Participă",
 
             // Link Strings
-           linkMission:        "Misiune",
+            linkMission:        "Misiune",
             linkAbout:          "Despre",
             linkProjects:       "Proiecte",
             linkSupport:        "Asistență",
@@ -470,7 +472,8 @@
             firefoxFlicks:      "Premii deosebite! Juriu de la Hollywood! Semne de exclamație! Participă la Firefox Flicks, spunând povestea noastră în acest concurs internațional sau votându-ți favoriții!"
         },
 
-        "sl" : { // Locale strings for Slovenian
+        "sl"    : { // Locale strings for Slovenian
+
             // Title Strings
             titleMozilla:       "Mozilla",
             titleProducts:      "Izdelki",
@@ -497,7 +500,7 @@
             firefoxFlicks:      "Lepe nagrade! Sodniki iz Hollywooda! Klicaji! Sodelujte v Firefox Flicks, svetovnem nagradnem tekmovanju, s svojo zgodbo ali glasujte za svoje favorite!"
         },
 
-        "sr" : { // Locale strings for Serbian
+        "sr"    : { // Locale strings for Serbian
 
             // Title Strings
             titleMozilla:       "Мозила",
@@ -525,7 +528,7 @@
             firefoxFlicks:      "Супер награде! Холивудске судије! Прикључите се Фајерфокс Фликс такмичењу и покажите свету Вашу причу, или гласајте за Ваш омиљени видео!"
         },
 
-        "ta" : { // Locale strings for Tamil
+        "ta"    : { // Locale strings for Tamil
 
             // Title Strings
             titleMozilla:       "மொசில்லா",
@@ -553,7 +556,7 @@
             firefoxFlicks:      "அற்புதமானப் பரிசுகள்! ஹாலிவுட் இயக்குனர்கள் நீதிபதிகளாக! பங்கேற்பீர் Firefox Flicks, உலகெங்கும் நடக்கும் வீடியோப் போட்டியில் கலந்துநம் வெற்றிக் கதையை உலகிற்கு எடுத்துறைபீர், அல்லது உங்களுக்கு பிடித்தமானவைக்கு வாக்களிப்பீர்"
         },
 
-        "zh" : { // Locale strings for Chinese Traditional
+        "zh"    : { // Locale strings for Chinese Traditional
 
             // Title Strings
             titleMozilla:       "Mozilla",
