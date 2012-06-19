@@ -14,42 +14,42 @@
  * Localization contributors list:
  *
  * Bengali (bn)
- * - Soumya Deb (@debloper) <debloper@gmail.com>, 2012
- * - Sayak Sarkar (@sayak-sarkar) <sayak.bugsmith@gmail.com>, 2012
+ * - Soumya Deb (debloper) <debloper@gmail.com>, 2012
+ * - Sayak Sarkar (sayak-sarkar) <sayak.bugsmith@gmail.com>, 2012
  * - Mahay Alam Khan <makl10n@yahoo.com>, 2012
  * German (de)
- * - Jan Bambach (@MozJan) <jan.bambach@hotmail.de>, 2012
+ * - Jan Bambach (MozJan) <jan.bambach@hotmail.de>, 2012
  * Spanish (es)
- * - Guillermo López (@willyaranda) <willyaranda@gmail.com>, 2012
+ * - Guillermo López (willyaranda) <willyaranda@gmail.com>, 2012
  * French (fr)
- * - Julia Buchner (@PetiPandaRou) <julia@buchner.fr>, 2012
- * - Jean-Bernard Marcon (@goofy-bz) <goofyfr@gmail.com>, 2012
+ * - Julia Buchner (PetiPandaRou) <julia@buchner.fr>, 2012
+ * - Jean-Bernard Marcon (goofy-bz) <goofyfr@gmail.com>, 2012
  * Frysian (fy)
- * - Wim Benes (@Fjoerfoks) <fryskefirefox@gmail.com>, 2012
+ * - Wim Benes (Fjoerfoks) <fryskefirefox@gmail.com>, 2012
  * Hebrew (he)
- * - Tomer Cohen (@tomer) <tomer.mozilla@tomercohen.com>, 2012
+ * - Tomer Cohen (tomer) <tomer.mozilla@tomercohen.com>, 2012
  * Indonesian (id)
  * - Fauzan Alfi (fauzanalfi) <fauzanalfi@mozilla.web.id>, 2012
  * Malay (ms)
- * -  Muhammad Syafiq Mazli (syafiqmazli) <creativeneuron8@gmail.com>, 2012
+ * - Muhammad Syafiq Mazli (syafiqmazli) <creativeneuron8@gmail.com>, 2012
  * Burmese (my)
  * - Chit Thiri Maung (ahkeno) <ahkeno@gmail.com>, 2012
  * Dutch (nl)
- * - Wim Benes (@Fjoerfoks) <fryskefirefox@gmail.com>, 2012
+ * - Wim Benes (Fjoerfoks) <fryskefirefox@gmail.com>, 2012
  * Polish (pl)
  * - Joanna Mazgaj <jmazgaj@aviary.pl>, 2012
  * Portuguese (pt)
- * - Leo Balter (@leobalter) <leobalter@me.com>, 2012
+ * - Leo Balter (leobalter) <leobalter@me.com>, 2012
  * Romanian (ro)
- * - Tiberiu C. Turbureanu (@tct) <tct@ceata.org>, 2012
+ * - Tiberiu C. Turbureanu (tct) <tct@ceata.org>, 2012
  * Slovenian (sl)
- * - Matjaž Horvat (@mathjazz) <matjaz@mozilla.com>, 2012
+ * - Matjaž Horvat (mathjazz) <matjaz@mozilla.com>, 2012
  * Serbian (sr)
- * - Oskar Ivanić (@ioskar) <oskar.ivanic@gmail.com>, 2012
+ * - Oskar Ivanić (ioskar) <oskar.ivanic@gmail.com>, 2012
  * Tamil (ta)
- * - Gauthamraj Elango (@gautha91) <vallavan2valluvan@gmail.com>, 2012
+ * - Gauthamraj Elango (gautha91) <vallavan2valluvan@gmail.com>, 2012
  * Traditional Chinese (zh)
- * - Peter Chen (@petercpg) <petercpg@gmail.com>, 2012
+ * - Peter Chen (petercpg) <petercpg@gmail.com>, 2012
  */
 
 ( function () {
