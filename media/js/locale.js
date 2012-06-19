@@ -23,6 +23,7 @@
  * - Guillermo López (@willyaranda) <willyaranda@gmail.com>, 2012
  * French (fr)
  * - Julia Buchner (@PetiPandaRou) <julia@buchner.fr>, 2012
+ * - Jean-Bernard Marcon (@goofy-bz) <goofyfr@gmail.com>, 2012
  * Frysian (fy)
  * - Wim Benes (@Fjoerfoks) <fryskefirefox@gmail.com>, 2012
  * Hebrew (he)
@@ -206,7 +207,7 @@
             linkWebDir: "Plan du site",
 
             // Locale for Firefox Beta Promotions
-            firefoxBeta: "Téléchargez Firefox Beta, faites nous part de vos remarques et aidez nous à améliorer la prochaine version de Firefox"
+            firefoxBeta: "Téléchargez Firefox Bêta, faites-nous part de vos remarques et aidez-nous à améliorer la prochaine version de Firefox"
         },
 
         "fy" : { // Locale strings for Frisian
