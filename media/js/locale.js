@@ -28,6 +28,8 @@
  * - Wim Benes (@Fjoerfoks) <fryskefirefox@gmail.com>, 2012
  * Hebrew (he)
  * - Tomer Cohen (@tomer) <tomer.mozilla@tomercohen.com>, 2012
+ * Malay (ms)
+ * -  Muhammad Syafiq Mazli (syafiqmazli) <creativeneuron8@gmail.com>, 2012
  * Dutch (nl)
  * - Wim Benes (@Fjoerfoks) <fryskefirefox@gmail.com>, 2012
  * Polish (pl)
@@ -60,6 +62,7 @@
             "fr":       "Français",
             "fy":       "Frysk",
             "he":       "עברית",
+            "ms":       "Bahasa Melayu",
             "nl":       "Nederlands",
             "pl":       "Polski",
             "pt":       "Português",
@@ -263,6 +266,34 @@
 
             // Locale for Firefox Flicks Promotions
             firefoxFlicks:      "פרסים גדולים! שופטים מהוליווד! סימני קריאה! היכנסו אל Firefox Flicks, תחרות וידאו עולמית שמטרתה לספר את סיפורנו, או הצביעו למועדפים עליכם!"
+        },
+
+        "ms"    : { // Locale strings for Bahasa Malaysia / Malay
+
+            // Title Strings
+            titleMozilla:       "Mozilla",
+            titleProducts:      "Produk",
+            titleInnovation:    "Innovasi",
+            titleGetInvolved:   "Ayuh Bergabung!",
+
+            // Link Strings
+            linkMission:        "Misi",
+            linkAbout:          "Tentang Kami",
+            linkProjects:       "Projek",
+            linkSupport:        "Sokongan",
+            linkMDN:            "Developer Network",
+            linkFirefox:        "Firefox",
+            linkThunderbird:    "Thunderbird",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "Labs",
+            linkVolunteers:     "Sukarelawan",
+            linkCareers:        "Kareer",
+            linkFindUs:         "Cari Kami",
+            linkJoinUs:         "Sertai Kami",
+            linkWebDir:         "Peta Laman",
+
+            // Locale for Firefox Beta Promotions
+            firefoxBeta:        "Muat turun Firefox Beta, berikan maklum balas dan bantu untuk menjadikan versi daripada Firefox malah lebih hebat!"
         },
 
         "nl"    : { // Locale strings for Hebrew
