@@ -28,6 +28,8 @@
  * - Wim Benes (@Fjoerfoks) <fryskefirefox@gmail.com>, 2012
  * Hebrew (he)
  * - Tomer Cohen (@tomer) <tomer.mozilla@tomercohen.com>, 2012
+ * Indonesian (id)
+ * - Fauzan Alfi (fauzanalfi) <fauzanalfi@mozilla.web.id>, 2012
  * Malay (ms)
  * -  Muhammad Syafiq Mazli (syafiqmazli) <creativeneuron8@gmail.com>, 2012
  * Burmese (my)
@@ -64,6 +66,7 @@
             "fr":       "Français",
             "fy":       "Frysk",
             "he":       "עברית",
+            "id":       "Bahasa Indonesia",
             "ms":       "Bahasa Melayu",
             "my":       "ဗမာစာ",
             "nl":       "Nederlands",
@@ -269,6 +272,34 @@
 
             // Locale for Firefox Flicks Promotions
             firefoxFlicks:      "פרסים גדולים! שופטים מהוליווד! סימני קריאה! היכנסו אל Firefox Flicks, תחרות וידאו עולמית שמטרתה לספר את סיפורנו, או הצביעו למועדפים עליכם!"
+        },
+
+        "id"    : { // Locale strings for Indonesian
+
+            // Title Strings
+            titleMozilla:       "Mozilla",
+            titleProducts:      "Produk",
+            titleInnovation:    "Inovasi",
+            titleGetInvolved:   "Ikut Berperan",
+
+            // Link Strings
+            linkMission:        "Misi",
+            linkAbout:          "Tentang Kami",
+            linkProjects:       "Proyek",
+            linkSupport:        "Dukungan",
+            linkMDN:            "Jaringan Pengembang",
+            linkFirefox:        "Firefox",
+            linkThunderbird:    "Thunderbird",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "Labs",
+            linkVolunteers:     "Sukarelawan",
+            linkCareers:        "Karier",
+            linkFindUs:         "Temukan Kami",
+            linkJoinUs:         "Bergabung Dengan Kami",
+            linkWebDir:         "Direktori Situs Web",
+
+            // Locale for Firefox Beta Promotions
+            firefoxBeta: "Unduh Firefox Beta, berikan umpan balik dan bantu kami untuk menjadikan Firefox lebih baik!"
         },
 
         "ms"    : { // Locale strings for Bahasa Malaysia / Malay
