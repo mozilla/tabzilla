@@ -348,7 +348,7 @@
             linkThunderbird:    "Thunderbird",
             linkWebFWD:         "WebFWD",
             linkLabs:           "Labs",
-            linkWebmaker:       "Webmaker"
+            linkWebmaker:       "Webmaker",
             linkVolunteer:      "စေတနာ့၀န်ထမ်းများ",
             linkCareers:        "သက်မွေး၀မ်းကျောင်း",
             linkFindUs:         "ရှာရန်",
