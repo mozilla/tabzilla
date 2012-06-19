@@ -30,6 +30,8 @@
  * - Tomer Cohen (@tomer) <tomer.mozilla@tomercohen.com>, 2012
  * Malay (ms)
  * -  Muhammad Syafiq Mazli (syafiqmazli) <creativeneuron8@gmail.com>, 2012
+ * Burmese (my)
+ * - Chit Thiri Maung (ahkeno) <ahkeno@gmail.com>, 2012
  * Dutch (nl)
  * - Wim Benes (@Fjoerfoks) <fryskefirefox@gmail.com>, 2012
  * Polish (pl)
@@ -63,6 +65,7 @@
             "fy":       "Frysk",
             "he":       "עברית",
             "ms":       "Bahasa Melayu",
+            "my":       "ဗမာစာ",
             "nl":       "Nederlands",
             "pl":       "Polski",
             "pt":       "Português",
@@ -294,6 +297,35 @@
 
             // Locale for Firefox Beta Promotions
             firefoxBeta:        "Muat turun Firefox Beta, berikan maklum balas dan bantu untuk menjadikan versi daripada Firefox malah lebih hebat!"
+        },
+
+        "my"    : { // Locale strings for Burmese
+
+            // Title Strings
+            titleMozilla:       "Mozilla",
+            titleProducts:      "ထုတ်ကုန်များ",
+            titleInnovation:    "တီထွင်ဆန်းသစ်ချက်များ",
+            titleGetInvolved:   "ပါ၀င်ဆောင်ရွက်ရန်",
+
+            // Link Strings
+            linkMission:        "ရည်မှန်းချက်",
+            linkAbout:          "အကြောင်းအရာ",
+            linkProjects:       "စီမံကိန်းများ",
+            linkSupport:        "ထောက်ပံ့ကူညီရန်",
+            linkMDN:            "Developer Network",
+            linkFirefox:        "မြီးမြေခွေး",
+            linkThunderbird:    "Thunderbird",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "Labs",
+            linkWebmaker:       "Webmaker"
+            linkVolunteer:      "စေတနာ့၀န်ထမ်းများ",
+            linkCareers:        "သက်မွေး၀မ်းကျောင်း",
+            linkFindUs:         "ရှာရန်",
+            linkJoinUs:         "ပူးပေါင်းပါ၀င်ဆောင်ရွက်ရန်",
+            linkWebDir:         "ဝဘ်ဆိုက် လမ်းညွှန်",
+
+            // Locale for the Promotional Contents
+            promoLink:         "Firefox Beta အား Download ချ၍ တွေ့ရှိမှုများကို တုံ့ပြန်ချက်ပေး၍ နောက်အသစ်ထွက်ရှိလာမည့် Firefox အား ပိုမိုကောင်းမွန်လာစေရန် ကူညီပေးပါရန်"
         },
 
         "nl"    : { // Locale strings for Hebrew
