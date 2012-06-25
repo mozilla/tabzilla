@@ -531,7 +531,7 @@ Tabzilla.content =
     + '    <div class="snippet" id="tabzilla-promo-mobile">'
     + '    <a href="http://www.mozilla.org/firefox/fx/?WT.mc_id=tzfxmobile&amp;WT.mc_ev=click#mobile">'
     + '     <h4>Big ideals. Small screen.</h4>'
-    + '     <p>Downlaod Firefox for Android and put the power of the Web in your hands.</p></a>'
+    + '     <p>Download Firefox for Android and put the power of the Web in your hands.</p></a>'
     + '    </div>'
     + '  </div>'
     + '  <div id="tabzilla-nav">'
