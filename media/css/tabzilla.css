@@ -331,8 +331,9 @@
     background-position: 0 0;
     background-color: #69acc7;
     color: #fff;
-    font-size: 11px;
-    padding: 50px 15px 30px 140px;
+    font-size: 12px;
+    padding: 40px 12px 30px 140px;
+    height: 140px;
     line-height: 20px;
     text-shadow: none;
 }
@@ -340,11 +341,12 @@
 #tabzilla-promo .snippet#tabzilla-promo-mobile a h4 {
     color: #fff;
     text-transform: none;
-    font-size: 26px;
+    font-size: 32px;
     letter-spacing: -1px;
     font-family: 'Open Sans Light';
     font-weight: normal;
     text-shadow: none;
+    width: 100px;
 }
 
 @media only screen and (min-width: 720px) and (max-width: 979px) {
