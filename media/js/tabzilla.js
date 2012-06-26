@@ -387,7 +387,7 @@ Tabzilla.preventDefault = function(ev)
 
 Tabzilla.handleResize = function(e)
 {
-    var width = $(window).width();
+    var width = jQuery(window).width();
     if (width <= 719 && !Tabzilla.smallMode) {
         Tabzilla.enterSmallMode();
     }
