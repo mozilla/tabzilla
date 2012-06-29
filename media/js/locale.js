@@ -28,6 +28,8 @@
  * - Wim Benes (Fjoerfoks) <fryskefirefox@gmail.com>, 2012
  * Hebrew (he)
  * - Tomer Cohen (tomer) <tomer.mozilla@tomercohen.com>, 2012
+ * Hindi (hi)
+ * - Kinshuk Sunil (kinshuksunil) <kinshuksunil@gmail.com>, 2012
  * Indonesian (id)
  * - Fauzan Alfi (fauzanalfi) <fauzanalfi@mozilla.web.id>, 2012
  * Malay (ms)
@@ -66,6 +68,7 @@
             "fr":       "Français",
             "fy":       "Frysk",
             "he":       "עברית",
+            "hi":       "हिन्दी",
             "id":       "Bahasa Indonesia",
             "ms":       "Bahasa Melayu",
             "my":       "ဗမာစာ",
@@ -273,6 +276,34 @@
 
             // Locale for Firefox Flicks Promotions
             firefoxFlicks:      "פרסים גדולים! שופטים מהוליווד! סימני קריאה! היכנסו אל Firefox Flicks, תחרות וידאו עולמית שמטרתה לספר את סיפורנו, או הצביעו למועדפים עליכם!"
+        },
+
+        "hi"    : { // Locale strings for Hindi
+            // Title Strings
+            titleMozilla:       "मोज़िल्ला",
+            titleProducts:      "उत्पाद",
+            titleInnovation:    "नवोन्मेष",
+            titleGetInvolved:   "शामिल हो",
+
+            // Link Strings
+            linkMission:        "उद्देश्य",
+            linkAbout:          "विवरण",
+            linkProjects:       "परियोजना",
+            linkSupport:        "सहायता",
+            linkMDN:            "डेवेलोपेर समूह",
+            linkFirefox:        "फायरफ़ॉक्स",
+            linkThunderbird:    "थंडरबर्ड ",
+            linkWebFWD:         "WebFWD",
+            linkLabs:           "प्रयोगशाला",
+            linkWebmaker:       "Webmaker",
+            linkVolunteer:      "स्वयंसेवक",
+            linkCareers:        "रोज़गार",
+            linkFindUs:         "हम से मिले",
+            linkJoinUs:         "हम से जुड़े",
+            linkWebDir:         "वेबसाइट निर्देशिका",
+
+            // Locale for the Promotional Contents
+            promoLink:          "फायरफॉक्स बीटा डाउनलोड करे, प्रतिक्रिया देकर फायरफॉक्स के अगले संस्करण को और भी अद्भुत बनाने में सहयोग करे."
         },
 
         "id"    : { // Locale strings for Indonesian
