@@ -5,17 +5,17 @@ tabzilla
 
 Adding the universal tab requires to a site requires:
 
-1. Add the static tab link (example below) to the top of your template  
+1. Add the static tab link (example below) to the top of your template.
     ```<a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>```
-2. Include the tabzilla.css CSS file either as a CSS include or built into your minified styles  
+2. Include the tabzilla.css CSS file either as a CSS include or built in to your minified styles.
     ```<link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet" />```
-3. Include the tabzilla.js file in your template (preferably in the footer)  
+3. Include the tabzilla.js file in your template (preferably in the footer).
     ```<script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>```
 
 Requirements
 ------------
 
-As the universal tab does inject HTML/CSS into the DOM, some there are some requirements that must be met by including sites.
+As the universal tab does inject HTML/CSS into the DOM, some there are some requirements that you must meet.
 
 1. Background images must not be attached to the ```<body>``` element.
 2. Absolutely positioned elements must not be positioned relative to the ```<body>``` element.
@@ -27,10 +27,9 @@ If jQuery is already included on the page, it will be used by Tabzilla. If jQuer
 
 Testing Bookmarklet
 -------------------
-To test the universal tab on your mozilla website, create a new bookmark with the contents of <a href="https://github.com/mozilla/tabzilla/blob/master/media/bookmarklet/tabzilla.url">this file</a> as the Location. Then, click this bookmarklet while on one of your pages to see how the tab will appear on your site.
+To make sure Tabzilla is working properly, create a new bookmark with the contents of <a href="https://github.com/mozilla/tabzilla/blob/master/media/bookmarklet/tabzilla.url">this file</a>, then click the bookmarklet while on one of your pages to see how the tab will appear on your site.
 
-Note the following limitations of the bookmarklet:
+Please note the following limitations of the bookmarklet:
 
-* The tab is aligned to the top right of the viewport, not the top-right of your layout, as it should be.
-* The tab has a float:left; which may interfere with other content on your page, or slip behind other elements and be invisible.
-
+* The tab is aligned to the top right of the viewport, not to the top right of your layout, as it should be.
+* The tab has a float:left; that may interfere with other content on your page or slip behind other elements and be invisible.
