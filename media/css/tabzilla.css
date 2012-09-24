@@ -178,6 +178,7 @@
 #tabzilla-panel #tabzilla-nav ul {
     margin: 0;
     padding: 0;
+    font-size: inherit;
 }
 
 #tabzilla-panel #tabzilla-nav ul li {
@@ -303,6 +304,12 @@
 #tabzilla-promo .snippet a:active {
     text-decoration: none;
     background-color: #f0f0f0;
+}
+
+#tabzilla-promo .snippet p {
+    margin: 0;
+    color: inherit;
+    font-family: inherit;
 }
 
 #tabzilla-promo .snippet#tabzilla-promo-theden a {
