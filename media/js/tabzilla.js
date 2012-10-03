@@ -549,7 +549,7 @@ Tabzilla.content =
     + '        <ul>'
     + '          <li><a href="http://www.mozilla.org/firefox">Firefox</a></li>'
     + '          <li><a href="http://www.mozilla.org/thunderbird">Thunderbird</a></li>'
-    + '          <li><a href="http://www.mozilla.org/b2g">Boot to Gecko</a></li>'
+    + '          <li><a href="http://www.mozilla.org/firefoxos">Firefox OS</a></li>'
     + '        </ul>'
     + '      </li>'
     + '      <li><h2>Innovations</h2>'
