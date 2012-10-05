@@ -186,13 +186,10 @@
     display: inline;
     list-style-type: none;
     width: 17%;
-    margin: 40px 3% 0 0;
+    margin: 40px 3% 0 -1px;
     padding: 0;
-    background-color: transparent;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABfCAMAAAAeT108AAAABlBMVEX////W1tZkFI+EAAAAAXRSTlMAQObYZgAAABdJREFUeNrVwwENAAAAwiDev7Q5ZEP8HhKOADGMXVvVAAAAAElFTkSuQmCC);
-    background-position: 100% 0;
-    background-repeat: no-repeat;
     line-height: 1.1;
+    border-right: 1px dotted #ccc;
 }
 
 * html #tabzilla-panel #tabzilla-nav ul li {
@@ -203,6 +200,7 @@
     float: none;
     margin: 0;
     height: auto;
+    border: 0;
 }
 
 #tabzilla-panel #tabzilla-nav a {
@@ -225,7 +223,7 @@
 }
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search {
-    background-image: none;
+    border: 0;
 }
 
 #tabzilla-panel #tabzilla-nav ul li#tabzilla-search a {
