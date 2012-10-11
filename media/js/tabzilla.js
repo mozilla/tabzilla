@@ -556,7 +556,7 @@ Tabzilla.content =
     + '        <ul>'
     + '          <li><a href="https://webfwd.org/">WebFWD</a></li>'
     + '          <li><a href="https://mozillalabs.com/">Labs</a></li>'
-    + '          <li><a href="https://www.mozilla.org/webmaker/">Webmaker</a></li>'
+    + '          <li><a href="https://webmaker.org/">Webmaker</a></li>'
     + '        </ul>'
     + '      </li>'
     + '      <li><h2>Get Involved</h2>'
