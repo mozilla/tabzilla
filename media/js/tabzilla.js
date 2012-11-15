@@ -529,7 +529,7 @@ Tabzilla.content =
     '<div id="tabzilla-contents">'
     + '  <div id="tabzilla-promo">'
     + '    <div class="snippet" id="tabzilla-promo-social">'
-    + '    <a href="">'
+    + '    <a href="http://www.facebook.com/fxmessenger">'
     + '     <h4>Facebook Messenger<br>for Firefox<br>is here! »</h4>'
     + '    </a>'
     + '    </div>'
