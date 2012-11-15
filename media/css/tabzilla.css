@@ -360,7 +360,7 @@
     background-color: #69acc7;
     color: #fff;
     font-size: 12px;
-    padding: 15px 12px 30px 40px;
+    padding: 20px 12px 25px 30px;
     height: 165px;
     line-height: 20px;
     text-shadow: none;
@@ -375,6 +375,8 @@
     font-weight: normal;
     text-shadow: none;
     width: auto;
+    margin-bottom: 5px;
+    line-height: 1.05;
 }
 
 
