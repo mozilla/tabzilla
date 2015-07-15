@@ -3,6 +3,22 @@
 This is the home of Tabzilla, the universal tab you can add to your website. Below
 follows simple instructions on how to get, and use Tabzilla.
 
+## Upgrading to the new Tabzilla
+
+Before you switch to the new Tabzilla, there are a couple of caveats you need to be
+aware of.
+
+- Tabzilla no longer needs any fonts bundled with it so, we are no longer including
+`@font-face` declarations for Open Sans in the CSS.
+- As this version of Tabzilla is static, we have no need for JavaScript and as such,
+we no longer inject jQuery.
+
+If you have been relying on these assets being included/injected by Tabzilla, you
+will now have to manually include them on your site.
+
+[Download OpenSans][https://www.mozilla.org/styleguide/communications/typefaces/]
+[Download jQuery][https://jquery.com/]
+
 ## Bower Package
 
 Do you use [Bower](http://bower.io/) to manage your front-end dependencies? Well, then you will be
