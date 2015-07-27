@@ -51,7 +51,7 @@ Next, you need to add the following required `HTML` to your document.
 
 ```HTML
 <div id="tabzilla">
-    <a href="https://mozilla.org">Mozilla</a>
+    <a href="https://www.mozilla.org/">Mozilla</a>
 </div>
 ```
 
