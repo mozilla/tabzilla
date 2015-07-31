@@ -11,7 +11,20 @@ aware of.
 - Tabzilla is no longer available as a hosted service. You have to add it to your
 website using one of the options below.
 - Tabzilla no longer needs any fonts bundled with it so, we are no longer including
-`@font-face` declarations for Open Sans in the CSS.
+`@font-face` declarations for Open Sans in the CSS. *NOTE:* You can still load
+the Open-Sans fonts using the Mozilla CDN, or another CDN of your choosing, for example:
+
+```CSS
+@font-face{
+    font-family: 'Open Sans Light';
+	src: url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+```
+
 - This version of Tabzilla is static and there is no requirement for JavaScript,
 as such, we no longer inject jQuery.
 
