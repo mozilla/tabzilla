@@ -86,3 +86,7 @@ the color of the wordmark by adding the following override to your `CSS`:
 The above will result in the wordmark being displayed as follows:
 
 ![Tabzilla with custom pink wordmark](https://raw.github.com/mozilla/tabzilla/master/docs-assets/default.png)
+
+## License
+MPL-2.0
+
