@@ -13,9 +13,10 @@
     "node_modules",
     ".gitignore",
     "bower.json",
-    "Gruntfile.js",
+    "gulpfile.js",
     "index.html",
-    "package.json"
+    "package.json",
+    "LICENSE"
   ],
   "repository": {
       "type": "git",
