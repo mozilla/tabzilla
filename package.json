@@ -1,19 +1,22 @@
 {
   "name": "mozilla-tabzilla",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Universal Tabzilla for use on Mozilla websites",
-  "private": true,
+  "main": ["css/tabzilla.css"],
+  "files": ["css", "media"],
+  "keywords": ["mozilla", "tabzilla"],
+  "private": false,
   "scripts": {},
   "dependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/mozilla/tabzilla.git"
   },
+  "bugs": {
+    "url": "https://github.com/mozilla/tabzilla/issues/new"
+  },
   "author": "Mozilla",
   "license": "MPL-2.0",
-  "bugs": {
-    "url": "https://bugzilla.mozilla.org/"
-  },
   "devDependencies": {
     "del": "^1.2.0",
     "gulp": "^3.9.0",
