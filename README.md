@@ -45,6 +45,16 @@ bower install mozilla-tabzilla
 
 That's it! Now you have all the bits you need. Next step, add it to your site.
 
+## Node Package Manager
+
+Already have a `package.json` and use `npm` to install dependencies? Well, you can also [install Tabzilla
+using npm](https://www.npmjs.com/package/mozilla-tabzilla). So either add it to your dependency list
+or, install it using:
+
+```Shell
+npm install mozilla-tabzilla
+```
+
 ## Manual Download
 
 Don't use [Bower](http://bower.io/)? No problem, you can [download the latest release right here from the releases page](https://github.com/mozilla/tabzilla/releases).
@@ -89,4 +99,3 @@ The above will result in the wordmark being displayed as follows:
 
 ## License
 MPL-2.0
-
