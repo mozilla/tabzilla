@@ -32,3 +32,6 @@
   width: 88px;
   z-index: 1;
 }
+html[dir="rtl"] #tabzilla {
+  float: left;
+}

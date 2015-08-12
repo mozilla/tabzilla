@@ -97,5 +97,14 @@ The above will result in the wordmark being displayed as follows:
 
 ![Tabzilla with custom pink wordmark](https://raw.github.com/mozilla/tabzilla/master/docs-assets/default.png)
 
+## [i18n] Right To Left Languages
+
+For right to left languages it makes more sense to have Tabzilla float to the left, as apposed to the right. If you are using Tabzilla in a right to left language website, you need to add the following to the HTML element:
+
+```HTML
+<html dir="rtl">
+...
+```
+
 ## License
 MPL-2.0
