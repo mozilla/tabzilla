@@ -1,26 +1,25 @@
-var gulp = require('gulp'),
-    less = require('gulp-less'),
-    watch = require('gulp-watch'),
-    del = require('del'),
-    path = require('path');
+var del = require('del');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var watch = require('gulp-watch');
 
-gulp.task('less', function() {
-    return gulp.src('less/*.less')
-        .pipe(less({
-            paths: [path.join(__dirname, 'less', 'libs')]
-        }))
-        .pipe(gulp.dest('css'));
+var SASS_PATH = './sass/*.scss';
+
+gulp.task('sass', function() {
+  return gulp.src(SASS_PATH)
+    .pipe(sass())
+    .pipe(gulp.dest('css'));
 });
 
-gulp.task('watch', ['less'], function() {
-    gulp.watch('less/**/*.less', ['less']);
+gulp.task('watch', ['sass'], function() {
+  gulp.watch(SASS_PATH, ['sass']);
 });
 
 gulp.task('dist', function() {
-    del('css');
-    gulp.start('less');
+  del('css/*.css');
+  gulp.start('sass');
 });
 
 gulp.task('default', ['watch'], function() {
-    console.log('Watching all LESS files for changes...');
-})
+  console.log('Watching all Sass files for changes...');
+});

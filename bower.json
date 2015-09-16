@@ -7,7 +7,7 @@
   "main": ["css/tabzilla.css"],
   "ignore": [
     "docs-assets",
-    "less",
+    "sass",
     "node_modules",
     ".gitignore",
     "bower.json",

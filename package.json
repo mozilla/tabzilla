@@ -1,27 +1,32 @@
 {
   "name": "mozilla-tabzilla",
-  "version": "0.4.0",
   "description": "Universal Tabzilla for use on Mozilla websites",
-  "main": ["css/tabzilla.css"],
-  "files": ["css", "media"],
-  "keywords": ["mozilla", "tabzilla"],
-  "private": false,
-  "scripts": {},
+  "version": "0.4.0",
+  "author": "Mozilla",
+  "bugs": {
+    "url": "https://github.com/mozilla/tabzilla/issues/new"
+  },
   "dependencies": {},
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-watch": "^4.3.1"
+  },
+  "files": [
+    "index.js",
+    "css",
+    "media"
+  ],
+  "keywords": [
+    "mozilla",
+    "tabzilla"
+  ],
+  "license": "MPL-2.0",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/mozilla/tabzilla.git"
   },
-  "bugs": {
-    "url": "https://github.com/mozilla/tabzilla/issues/new"
-  },
-  "author": "Mozilla",
-  "license": "MPL-2.0",
-  "devDependencies": {
-    "del": "^1.2.0",
-    "gulp": "^3.9.0",
-    "gulp-less": "^3.0.3",
-    "gulp-watch": "^4.3.1",
-    "less": "2.4.0"
-  }
+  "scripts": {}
 }
