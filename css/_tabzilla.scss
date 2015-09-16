@@ -1,0 +1,52 @@
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+      only screen and (min--moz-device-pixel-ratio: 1.5),
+      only screen and (-o-min-device-pixel-ratio: 3/2),
+      only screen and (min-device-pixel-ratio: 1.5),
+      only screen and (min-resolution: 1.5dppx) {
+    @content;
+  }
+}
+
+$width: 147px;
+$height: 37px;
+
+#tabzilla {
+  float: right;
+  position: relative;
+
+  a {
+    background-image: url("../media/img/tabzilla-static.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: $height;
+    overflow: hidden;
+    position: relative;
+    text-indent: 120%;
+    white-space: nowrap;
+    width: $width;
+    z-index: 2;
+
+    @include retina {
+      background-image: url("../media/img/tabzilla-static-high-res.png");
+      -webkit-background-size: $width $height;
+      background-size: $width $height;
+    }
+  }
+
+  &:before {
+    background-color: transparent;
+    content: '';
+    display: block;
+    height: 26px;
+    left: 28px;
+    position: absolute;
+    top: 0;
+    width: 88px;
+    z-index: 1;
+  }
+
+  html[dir="rtl"] & {
+    float: left;
+  }
+}
