@@ -45,14 +45,14 @@ bower install mozilla-tabzilla
 
 That's it! Now you have all the bits you need. Next step, add it to your site.
 
-## Node Package Manager
+## npm
 
 Already have a `package.json` and use `npm` to install dependencies? Well, you can also [install Tabzilla
 using npm](https://www.npmjs.com/package/mozilla-tabzilla). So either add it to your dependency list
 or, install it using:
 
 ```Shell
-npm install mozilla-tabzilla
+npm install mozilla-tabzilla -S
 ```
 
 ## Manual Download
@@ -76,6 +76,51 @@ Next, you need to add the following required `HTML` to your document.
 <div id="tabzilla">
     <a href="https://www.mozilla.org/">Mozilla</a>
 </div>
+```
+
+### Using Tabzilla with Sass
+
+After installing Tabzilla using [npm](#npm), it is easy to import the styles into your Sass style sheets.
+
+If you're using [Gulp](http://gulpjs.com), you can `require` the mozilla-tabzilla module and specify the Tabzilla `includePaths` using the following snippet:
+
+```sass
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var tabzilla = require('mozilla-tabzilla');
+
+gulp.task('sass', function () {
+  gulp.src('*.scss')
+    .pipe(sass({
+      includePaths: tabzilla.includePaths
+    }))
+    .pipe(gulp.dest('css'));
+});
+```
+
+Then simply call `@import "tabzilla";` from within your Sass file to import the Tabzilla styles.
+
+If you're using [Grunt](http://gruntjs.com), you can `require` the mozilla-tabzilla module using the following snippet:
+
+```sass
+var tabzilla = require('mozilla-tabzilla');
+
+module.exports = function (grunt) {
+  grunt.loadNpmTasks('grunt-sass');
+
+  grunt.initConfig({
+    sass: {
+      options: {
+        includePaths: [tabzilla.includePaths]
+      },
+      dist: {
+        files: {
+          'css/main.css': '*.scss'
+        }
+      }
+    }
+  });
+};
 ```
 
 ## Changing The Color of the Wordmark
