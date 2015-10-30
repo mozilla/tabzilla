@@ -17,7 +17,8 @@
   },
   "files": [
     "css",
-    "media"
+    "media",
+    "index.js"
   ],
   "keywords": [
     "mozilla",
