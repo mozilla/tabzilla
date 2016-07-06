@@ -64,7 +64,7 @@ project.
 
 ## Using Tabzilla
 
-First step is to add the `tabzilla.css` file to you main `HTML` file:
+First step is to add the `tabzilla.css` file to your main `HTML` file:
 
 ```HTML
 <link rel="stylesheet" type="text/css" href="css/tabzilla.css" media="screen" />
