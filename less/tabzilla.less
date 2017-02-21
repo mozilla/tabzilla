@@ -10,24 +10,25 @@
 
     a {
         .image-replaced();
-        .at2x('../media/img/tabzilla-static.png', 147px, 37px);
+        .at2x('../media/img/tabzilla-static.png', 126px, 36px);
         background-repeat: no-repeat;
         display: block;
-        height: 37px;
+        height: 36px;
+        margin: 0 20px;
         position: relative;
-        width: 147px;
+        width: 126px;
         z-index: 2;
     }
 
-    &:before {
+    &::before {
         background-color: transparent;
+        bottom: 0;
         content: '';
         display: block;
-        height: 26px;
-        left: 28px;
+        left: 0;
         position: absolute;
+        right: 0;
         top: 0;
-        width: 88px;
         z-index: 1;
     }
 }
