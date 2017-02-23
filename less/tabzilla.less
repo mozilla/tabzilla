@@ -4,37 +4,31 @@
 
 @import "lib/lib.less";
 
+@icon-height: 30px;
+@icon-top-position: 7px;
+@gutter-position: 40px;
+
 #tabzilla {
-    float: right;
     position: relative;
+    background: #fff;
+    width: 100%;
+    height: @icon-height + (@icon-top-position * 2);
 
     a {
         .image-replaced();
-        .at2x('../media/img/tabzilla-static.png', 126px, 36px);
+        .at2x('../media/img/tabzilla-static.png', 105px, @icon-height);
         background-repeat: no-repeat;
         display: block;
-        height: 36px;
-        margin: 0 20px;
-        position: relative;
-        width: 126px;
-        z-index: 2;
-    }
-
-    &::before {
-        background-color: transparent;
-        bottom: 0;
-        content: '';
-        display: block;
-        left: 0;
+        height: @icon-height;
         position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 1;
+        right: @gutter-position;
+        top: @icon-top-position;
+        width: 105px;
+        z-index: 2;
     }
 }
 
-html[dir='rtl'] {
-    #tabzilla {
-        float: left;
-    }
+html[dir='rtl'] #tabzilla a {
+    left: @gutter-position;
+    right: auto;
 }
